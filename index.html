@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta name="description" content="Code Syndicate Latam: Ingeniería de software de alta integridad y arquitectura cloud nativa.">
+    
+    <title>Code Syndicate Latam | Infrastructure & Trust</title>
+    
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Rubik:wght@400;600;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    fontFamily: {
+                        "sans": ["Inter", "sans-serif"],       // Texto general
+                        "display": ["Rubik", "sans-serif"],    // Títulos (Branding)
+                        "mono": ["Space Mono", "monospace"],   // Detalles técnicos
+                    },
+                    colors: {
+                        "bg-main": "#0e0e10",   // Obsidian (Fondo Principal)
+                        "bg-card": "#262728",   // Onyx (Tarjetas)
+                        "bg-header": "#0f0842", // Deep Navy
+                        "primary": "#8236fc",   // Vivid Purple
+                        "accent": "#fbd405",    // Cyber Yellow
+                        "text-main": "#fcfffc", // Mint White
+                        "text-muted": "#a8a8b2" // Tech Grey
+                    },
+                    backgroundImage: {
+                        'hero-gradient': "linear-gradient(to bottom, rgba(15, 8, 66, 0.9), rgba(14, 14, 16, 1))",
+                    }
+                },
+            },
+        }
+    </script>
+    
+    <style>
+        body { font-family: "Inter", sans-serif; }
+        
+        /* Forzar títulos con la fuente Rubik para identidad visual */
+        h1, h2, h3, h4, h5, h6 { font-family: "Rubik", sans-serif; }
+        
+        /* Utilidad para ocultar scrollbar en elementos deslizables */
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        /* Ajuste para móviles: evita que palabras largas rompan el diseño */
+        p, h1, h2 { overflow-wrap: break-word; }
+    </style>
+</head>
+
+<body class="bg-bg-main text-text-main min-h-screen antialiased selection:bg-primary/30 selection:text-white">
+
+    <nav class="sticky top-0 z-50 border-b border-white/5 backdrop-blur-md bg-bg-main/90 supports-[backdrop-filter]:bg-bg-main/60">
+        <div class="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto">
+            
+            <div class="flex items-center">
+                <a href="#inicio" class="block hover:opacity-90 transition-opacity">
+                    <img src="csl_logo.png" alt="Code Syndicate Latam Logo" class="h-16 md:h-20 w-auto object-contain">
+                </a>
+            </div>
+
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#servicios" class="text-sm font-semibold text-white hover:text-accent transition-colors tracking-wide">ECOSISTEMA</a>
+                <a href="#equipo" class="text-sm font-semibold text-white hover:text-accent transition-colors tracking-wide">LIDERAZGO</a>
+                <a href="#contacto" class="text-sm font-semibold text-white hover:text-accent transition-colors tracking-wide">CONTACTO</a>
+                <a href="mailto:contacto@codesyndicate.lat" class="px-5 py-2 rounded-md bg-white/10 border border-white/10 text-white text-sm font-bold hover:bg-primary hover:border-primary transition-all">
+                    Acceso Clientes
+                </a>
+            </div>
+
+            <div class="md:hidden">
+                <button id="mobile-menu-btn" class="text-white hover:text-accent transition-colors focus:outline-none p-2">
+                    <span class="material-symbols-outlined" style="font-size: 32px;">menu</span>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-bg-card border-b border-white/5 absolute w-full left-0 top-full shadow-2xl backdrop-blur-xl bg-opacity-95">
+            <div class="flex flex-col px-6 py-6 gap-4">
+                <a href="#inicio" class="text-base font-semibold text-white hover:text-accent py-2 border-b border-white/5">Inicio</a>
+                <a href="#servicios" class="text-base font-semibold text-white hover:text-accent py-2 border-b border-white/5">Ecosistema</a>
+                <a href="#equipo" class="text-base font-semibold text-white hover:text-accent py-2 border-b border-white/5">Liderazgo</a>
+                <a href="#contacto" class="text-base font-semibold text-white hover:text-accent py-2">Contacto</a>
+                <a href="mailto:contacto@codesyndicate.lat" class="mt-2 text-center w-full py-3 rounded-md bg-primary text-white font-bold">Acceso Clientes</a>
+            </div>
+        </div>
+    </nav>
+
+    <div id="inicio" class="relative w-full bg-hero-gradient pt-24 pb-32 px-6 text-center overflow-hidden">
+        
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute inset-0" style="background-image: linear-gradient(rgba(130, 54, 252, 0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(130, 54, 252, 0.15) 1px, transparent 1px); background-size: 50px 50px;"></div>
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,#0e0e10_80%)]"></div>
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto flex flex-col gap-8 items-center">
+            
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/20 border border-primary/50 backdrop-blur-sm">
+                <span class="material-symbols-outlined text-[#38bdf8]" style="font-size: 20px;">cloud</span>
+                <span class="text-white text-xs font-bold uppercase tracking-widest">Cloud Native Architecture</span>
+            </div>
+
+            <h1 class="text-5xl md:text-7xl font-black leading-tight tracking-tight text-white drop-shadow-lg">
+                Infraestructura Digital de <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-primary to-accent pb-2">Alta Integridad</span>
+            </h1>
+
+            <p class="text-text-muted text-lg md:text-xl max-w-2xl leading-relaxed">
+                <span class="text-primary font-bold font-mono text-2xl">{</span>
+                <span class="text-white font-bold font-display tracking-tight">Code Syndicate Latam</span>
+                <span class="text-primary font-bold font-mono text-2xl">}</span> 
+                diseña, despliega y opera arquitecturas de software centradas en la veracidad de datos, seguridad transaccional y escalabilidad cloud.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 w-full justify-center mt-8">
+                <a href="#contacto" class="px-8 py-4 rounded-lg bg-accent text-bg-main font-bold text-lg hover:bg-yellow-300 transition-all transform hover:-translate-y-1 shadow-[0_0_20px_rgba(251,212,5,0.3)] text-center font-display">
+                    Iniciar Proyecto
+                </a>
+                <a href="#servicios" class="px-8 py-4 rounded-lg bg-white/5 text-white border border-white/10 font-bold text-lg hover:bg-white/10 hover:border-primary/50 transition-all backdrop-blur-md text-center font-display">
+                    Explorar Ecosistema
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="servicios" class="px-6 py-24 max-w-7xl mx-auto scroll-mt-20">
+        <div class="mb-16 text-center md:text-left">
+            <span class="text-accent text-xs font-bold tracking-[0.2em] uppercase mb-3 block font-mono">Nuestro Alcance</span>
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+                Ecosistema de <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-primary">Soluciones</span>
+            </h2>
+            <p class="text-text-muted text-lg max-w-2xl mx-auto md:mx-0 leading-relaxed">
+                Transformamos problemas de confianza en arquitecturas de software robustas. Desde la infraestructura base hasta el producto final.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="group p-6 rounded-2xl bg-bg-card/60 backdrop-blur-md border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+                <div class="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                    <span class="material-symbols-outlined text-primary group-hover:text-white">encrypted</span>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-white">Zero Trust Security</h3>
+                <p class="text-text-muted text-sm mb-6 leading-relaxed">Arquitecturas donde la identidad es el nuevo perímetro. Autenticación robusta y cifrado en tránsito.</p>
+                <div class="flex flex-wrap gap-2 font-mono">
+                    <span class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] text-accent uppercase">OAuth2</span>
+                    <span class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] text-text-muted uppercase">DevSecOps</span>
+                </div>
+            </div>
+            <div class="group p-6 rounded-2xl bg-bg-card/60 backdrop-blur-md border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+                <div class="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                    <span class="material-symbols-outlined text-primary group-hover:text-white">hub</span>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-white">Data Integrity</h3>
+                <p class="text-text-muted text-sm mb-6 leading-relaxed">Sistemas transaccionales diseñados para la veracidad absoluta. Consistencia de datos distribuida.</p>
+                <div class="flex flex-wrap gap-2 font-mono">
+                    <span class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] text-accent uppercase">SQL/NoSQL</span>
+                    <span class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] text-text-muted uppercase">Auditable</span>
+                </div>
+            </div>
+            <div class="group p-6 rounded-2xl bg-bg-card/60 backdrop-blur-md border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+                <div class="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                    <span class="material-symbols-outlined text-primary group-hover:text-white">cloud_circle</span>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-white">Cloud Native</h3>
+                <p class="text-text-muted text-sm mb-6 leading-relaxed">Infraestructura elástica y resiliente. Contenedores y orquestación para alta disponibilidad.</p>
+                <div class="flex flex-wrap gap-2 font-mono">
+                    <span class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] text-accent uppercase">Kubernetes</span>
+                    <span class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] text-text-muted uppercase">Docker</span>
+                </div>
+            </div>
+            <div class="group p-6 rounded-2xl bg-bg-card/60 backdrop-blur-md border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+                <div class="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                    <span class="material-symbols-outlined text-primary group-hover:text-white">code_blocks</span>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-white">Modern Engineering</h3>
+                <p class="text-text-muted text-sm mb-6 leading-relaxed">Desarrollo agnóstico y adaptable. Seleccionamos el stack tecnológico ideal para la escala de tu reto.</p>
+                <div class="flex flex-wrap gap-2 font-mono">
+                    <span class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] text-accent uppercase">Java • Node • Py</span>
+                    <span class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] text-text-muted uppercase">React / Angular</span>
+                    <span class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] text-primary uppercase">Agile</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="equipo" class="relative w-full py-24 border-t border-white/5 scroll-mt-20">
+        <div class="absolute inset-0 bg-bg-main/50"></div>
+        <div class="relative z-10 px-6 max-w-7xl mx-auto">
+            
+            <div class="mb-16 text-center md:text-left">
+                <span class="text-accent text-xs font-bold tracking-[0.2em] uppercase mb-3 block font-mono">Quiénes Somos</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-white">
+                    Liderazgo Técnico & <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-primary">Estrategia</span>
+                </h2>
+                <p class="text-text-muted mt-4 max-w-2xl mx-auto md:mx-0 leading-relaxed">
+                    Un equipo multidisciplinario uniendo infraestructura cloud, ciberseguridad y visión de negocio para construir sistemas resilientes.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
+                
+                <div class="group relative p-6 rounded-2xl bg-bg-card border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+                    <div class="flex items-start justify-between mb-4">
+                        <img src="fidel.png" alt="Fidel Vera" class="w-20 h-20 rounded-full object-cover border-2 border-white/10 group-hover:border-primary transition-colors">
+                        <a href="#" class="text-text-muted hover:text-[#0077b5] transition-colors"><span class="material-symbols-outlined">link</span></a>
+                    </div>
+                    <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">Fidel Vera</h3>
+                    <p class="text-white text-xs font-bold uppercase tracking-wider mt-1 font-mono">CEO & Co-Founder</p>
+                    <div class="mt-4 pt-4 border-t border-white/5">
+                        <p class="text-text-muted text-sm"><span class="text-accent">•</span> Estrategia Corporativa</p>
+                    </div>
+                </div>
+
+                <div class="group relative p-6 rounded-2xl bg-bg-card border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+                    <div class="flex items-start justify-between mb-4">
+                        <img src="julio.png" alt="Julio Alvarez" class="w-20 h-20 rounded-full object-cover border-2 border-white/10 group-hover:border-primary transition-colors">
+                        <a href="#" class="text-text-muted hover:text-[#0077b5] transition-colors"><span class="material-symbols-outlined">link</span></a>
+                    </div>
+                    <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">Julio Alvarez</h3>
+                    <p class="text-white text-xs font-bold uppercase tracking-wider mt-1 font-mono">CTO & Co-Founder</p>
+                    <div class="mt-4 pt-4 border-t border-white/5">
+                        <p class="text-text-muted text-sm"><span class="text-accent">•</span> Tech Strategy & Innovation</p>
+                    </div>
+                </div>
+
+                <div class="group relative p-6 rounded-2xl bg-bg-card border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+                    <div class="flex items-start justify-between mb-4">
+                        <img src="juan.jpg" alt="Juan Carlos Avila" class="w-20 h-20 rounded-full object-cover border-2 border-white/10 group-hover:border-primary transition-colors">
+                        <a href="#" class="text-text-muted hover:text-[#0077b5] transition-colors"><span class="material-symbols-outlined">link</span></a>
+                    </div>
+                    <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">Juan Carlos Avila</h3>
+                    <p class="text-white text-xs font-bold uppercase tracking-wider mt-1 font-mono">Chief Architect</p>
+                    <div class="mt-4 pt-4 border-t border-white/5">
+                        <p class="text-text-muted text-sm"><span class="text-accent">•</span> Cloud Infrastructure & AWS</p>
+                    </div>
+                </div>
+
+                <div class="group relative p-6 rounded-2xl bg-bg-card border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+                    <div class="flex items-start justify-between mb-4">
+                        <img src="jaider.jpg" alt="Jaider Vergara" class="w-20 h-20 rounded-full object-cover border-2 border-white/10 group-hover:border-primary transition-colors">
+                        <a href="#" class="text-text-muted hover:text-[#0077b5] transition-colors"><span class="material-symbols-outlined">link</span></a>
+                    </div>
+                    <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">Jaider Vergara</h3>
+                    <p class="text-white text-xs font-bold uppercase tracking-wider mt-1 font-mono">Founding Engineer</p>
+                    <div class="mt-4 pt-4 border-t border-white/5">
+                        <p class="text-text-muted text-sm"><span class="text-accent">•</span> Core Engineering & Scale</p>
+                    </div>
+                </div>
+
+                <div class="group relative p-6 rounded-2xl bg-bg-card border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+                    <div class="flex items-start justify-between mb-4">
+                        <img src="raul.jpg" alt="Raul Almao" class="w-20 h-20 rounded-full object-cover border-2 border-white/10 group-hover:border-primary transition-colors">
+                        <a href="#" class="text-text-muted hover:text-[#0077b5] transition-colors"><span class="material-symbols-outlined">link</span></a>
+                    </div>
+                    <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">Raul Almao</h3>
+                    <p class="text-white text-xs font-bold uppercase tracking-wider mt-1 font-mono">Head of Cybersecurity</p>
+                    <div class="mt-4 pt-4 border-t border-white/5">
+                        <p class="text-text-muted text-sm"><span class="text-accent">•</span> SecOps & Data Integrity</p>
+                    </div>
+                </div>
+
+                <div class="group relative p-6 rounded-2xl bg-bg-card border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+                    <div class="flex items-start justify-between mb-4">
+                        <img src="lizeth.jpg" alt="Lizeth Monroy" class="w-20 h-20 rounded-full object-cover border-2 border-white/10 group-hover:border-primary transition-colors">
+                        <a href="#" class="text-text-muted hover:text-[#0077b5] transition-colors"><span class="material-symbols-outlined">link</span></a>
+                    </div>
+                    <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">Lizeth Monroy</h3>
+                    <p class="text-white text-xs font-bold uppercase tracking-wider mt-1 font-mono">Product Ops Lead</p>
+                    <div class="mt-4 pt-4 border-t border-white/5">
+                        <p class="text-text-muted text-sm"><span class="text-accent">•</span> Agile Delivery & Process</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer id="contacto" class="bg-bg-main border-t border-white/10 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                
+                <div class="flex flex-col items-start">
+                    <img src="csl_logo.png" alt="Code Syndicate Latam" class="w-56 h-auto mb-6 opacity-90 hover:opacity-100 transition-opacity">
+                    <p class="text-text-muted text-sm leading-relaxed max-w-xs">
+                        Ingeniería de software de alta integridad y arquitectura cloud nativa para el futuro digital de Latam.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-6 tracking-wider text-sm uppercase font-mono">Explorar</h4>
+                    <ul class="flex flex-col gap-3">
+                        <li><a href="#inicio" class="text-text-muted text-sm hover:text-primary transition-colors">Inicio</a></li>
+                        <li><a href="#servicios" class="text-text-muted text-sm hover:text-primary transition-colors">Ecosistema</a></li>
+                        <li><a href="#equipo" class="text-text-muted text-sm hover:text-primary transition-colors">Liderazgo</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-6 tracking-wider text-sm uppercase font-mono">Empresa</h4>
+                    <ul class="flex flex-col gap-3">
+                        <li><a href="mailto:support@codesyndicate.lat" class="text-text-muted text-sm hover:text-accent transition-colors">Centro de Ayuda</a></li>
+                        <li><span class="text-text-muted text-sm cursor-not-allowed opacity-50">Términos de Servicio</span></li>
+                        <li><span class="text-text-muted text-sm cursor-not-allowed opacity-50">Política de Privacidad</span></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-6 tracking-wider text-sm uppercase font-mono">Conectar</h4>
+                    <div class="flex flex-col gap-4">
+                        <a href="mailto:contacto@codesyndicate.lat" class="flex items-center gap-3 group">
+                            <div class="w-8 h-8 rounded bg-white/5 flex items-center justify-center group-hover:bg-primary transition-colors">
+                                <span class="material-symbols-outlined text-sm text-white">mail</span>
+                            </div>
+                            <span class="text-text-muted text-sm group-hover:text-white transition-colors">contacto@codesyndicate.lat</span>
+                        </a>
+                        <div class="flex items-center gap-3 group">
+                            <div class="w-8 h-8 rounded bg-white/5 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-sm text-white">location_on</span>
+                            </div>
+                            <span class="text-text-muted text-sm">Bogotá D.C., Colombia</span>
+                        </div>
+                        <div class="flex gap-4 mt-2">
+                            <a href="#" class="text-text-muted hover:text-[#0077b5] transition-colors"><span class="material-symbols-outlined">link</span></a>
+                            <a href="#" class="text-text-muted hover:text-white transition-colors"><span class="material-symbols-outlined">code</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-text-muted text-xs">&copy; 2025 Code Syndicate Latam S.A.S. Todos los derechos reservados.</p>
+                <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                    <span class="text-xs text-text-muted font-mono">All Systems Operational</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        if(btn && menu) {
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+            // Cierra el menú al hacer clic en cualquier enlace
+            menu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                });
+            });
+        }
+    </script>
+</body>
+</html>
