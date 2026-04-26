@@ -1,31 +1,39 @@
 <!DOCTYPE html>
 <html class="dark" lang="es">
+
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    
-    <meta name="description" content="Code Syndicate Latam: Laboratorio de producto (Product Lab) especializado en Ingeniería de Software de Alta Integridad y Arquitectura Cloud Native. Creadores de URBE.">
-    
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <meta name="description"
+        content="Code Syndicate Latam: Laboratorio de producto (Product Lab) especializado en Ingeniería de Software de Alta Integridad y Arquitectura Cloud Native. Creadores de URBE.">
+
     <title>Code Syndicate Latam | Product Lab & Cloud Architecture</title>
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230e0e10'/><text x='50' y='68' font-family='monospace' font-size='55' font-weight='bold' fill='%23fbd405' text-anchor='middle'>{}</text></svg>">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://codesyndicatelatam.com/">
     <meta property="og:title" content="Code Syndicate Latam | Infraestructura Digital de Alta Integridad">
-    <meta property="og:description" content="No somos una agencia. Somos un Product Lab de ingeniería distribuida construyendo el ecosistema URBE con estándares Zero-Trust y Cloud Native.">
+    <meta property="og:description"
+        content="No somos una agencia. Somos un Product Lab de ingeniería distribuida construyendo el ecosistema URBE con estándares Zero-Trust y Cloud Native.">
     <meta property="og:image" content="https://codesyndicatelatam.com/og-preview.jpg">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://codesyndicatelatam.com/">
     <meta name="twitter:title" content="Code Syndicate Latam | Product Lab">
-    <meta name="twitter:description" content="Ingeniería de Software de Alta Integridad. Construyendo infraestructura propia (URBE).">
+    <meta name="twitter:description"
+        content="Ingeniería de Software de Alta Integridad. Construyendo infraestructura propia (URBE).">
     <meta name="twitter:image" content="https://codesyndicatelatam.com/og-preview.jpg">
-    
-    <link href="https://fonts.googleapis.com" rel="preconnect"/>
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Rubik:wght@400;600;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-    
+
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Rubik:wght@400;600;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    
+
     <script>
         tailwind.config = {
             darkMode: "class",
@@ -52,94 +60,134 @@
             },
         }
     </script>
-    
+
     <style>
-        body { font-family: "Inter", sans-serif; }
-        
+        body {
+            font-family: "Inter", sans-serif;
+        }
+
         /* Forzar títulos con la fuente Rubik para identidad visual */
-        h1, h2, h3, h4, h5, h6 { font-family: "Rubik", sans-serif; }
-        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Rubik", sans-serif;
+        }
+
         /* Utilidad para ocultar scrollbar en elementos deslizables */
-        .hide-scrollbar::-webkit-scrollbar { display: none; }
-        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-        
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
         /* Ajuste para móviles: evita que palabras largas rompan el diseño */
-        p, h1, h2 { overflow-wrap: break-word; }
+        p,
+        h1,
+        h2 {
+            overflow-wrap: break-word;
+        }
     </style>
 </head>
 
 <body class="bg-bg-main text-text-main min-h-screen antialiased selection:bg-primary/30 selection:text-white">
 
-    <nav class="sticky top-0 z-50 border-b border-white/5 backdrop-blur-md bg-bg-main/90 supports-[backdrop-filter]:bg-bg-main/60">
+    <nav
+        class="sticky top-0 z-50 border-b border-white/5 backdrop-blur-md bg-bg-main/90 supports-[backdrop-filter]:bg-bg-main/60">
         <div class="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto">
-            
+
             <div class="flex items-center">
                 <a href="#inicio" class="block hover:opacity-90 transition-opacity">
-                    <img src="/img/csl_logo/csl_logo.png" alt="Code Syndicate Latam Logo" class="h-16 md:h-20 w-auto object-contain">
+                    <img src="/img/csl_logo/csl_logo.png" alt="Code Syndicate Latam Logo"
+                        class="h-16 md:h-20 w-auto object-contain">
                 </a>
             </div>
 
             <div class="hidden md:flex items-center gap-8">
-                <a href="#tecnologia" class="text-sm font-semibold text-white hover:text-accent transition-colors tracking-wide">TECNOLOGÍA</a>
-                <a href="#producto" class="text-sm font-semibold text-white hover:text-accent transition-colors tracking-wide">PRODUCTO</a>
-                <a href="#equipo" class="text-sm font-semibold text-white hover:text-accent transition-colors tracking-wide">EQUIPO</a>
-                <a href="#contacto" class="text-sm font-semibold text-white hover:text-accent transition-colors tracking-wide">CONTACTO</a>
-                <a href="mailto:contact@codesyndicatelatam.com" class="px-5 py-2 rounded-md bg-white/10 border border-white/10 text-white text-sm font-bold hover:bg-primary hover:border-primary transition-all">
+                <a href="#tecnologia"
+                    class="text-sm font-semibold text-white hover:text-accent transition-colors tracking-wide">TECNOLOGÍA</a>
+                <a href="#producto"
+                    class="text-sm font-semibold text-white hover:text-accent transition-colors tracking-wide">PRODUCTO</a>
+                <a href="#equipo"
+                    class="text-sm font-semibold text-white hover:text-accent transition-colors tracking-wide">EQUIPO</a>
+                <a href="#contacto"
+                    class="text-sm font-semibold text-white hover:text-accent transition-colors tracking-wide">CONTACTO</a>
+                <a href="mailto:contact@codesyndicatelatam.com"
+                    class="px-5 py-2 rounded-md bg-white/10 border border-white/10 text-white text-sm font-bold hover:bg-primary hover:border-primary transition-all">
                     Conectar
                 </a>
             </div>
 
             <div class="md:hidden">
-                <button id="mobile-menu-btn" class="text-white hover:text-accent transition-colors focus:outline-none p-2">
+                <button id="mobile-menu-btn"
+                    class="text-white hover:text-accent transition-colors focus:outline-none p-2">
                     <span class="material-symbols-outlined" style="font-size: 32px;">menu</span>
                 </button>
             </div>
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden bg-bg-card border-b border-white/5 absolute w-full left-0 top-full shadow-2xl backdrop-blur-xl bg-opacity-95">
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-bg-card border-b border-white/5 absolute w-full left-0 top-full shadow-2xl backdrop-blur-xl bg-opacity-95">
             <div class="flex flex-col px-6 py-6 gap-4">
-                <a href="#inicio" class="text-base font-semibold text-white hover:text-accent py-2 border-b border-white/5">Inicio</a>
-                <a href="#tecnologia" class="text-base font-semibold text-white hover:text-accent py-2 border-b border-white/5">Tecnología</a>
-                <a href="#producto" class="text-base font-semibold text-white hover:text-accent py-2 border-b border-white/5">Producto</a>
-                <a href="#equipo" class="text-base font-semibold text-white hover:text-accent py-2 border-b border-white/5">Equipo</a>
+                <a href="#inicio"
+                    class="text-base font-semibold text-white hover:text-accent py-2 border-b border-white/5">Inicio</a>
+                <a href="#tecnologia"
+                    class="text-base font-semibold text-white hover:text-accent py-2 border-b border-white/5">Tecnología</a>
+                <a href="#producto"
+                    class="text-base font-semibold text-white hover:text-accent py-2 border-b border-white/5">Producto</a>
+                <a href="#equipo"
+                    class="text-base font-semibold text-white hover:text-accent py-2 border-b border-white/5">Equipo</a>
                 <a href="#contacto" class="text-base font-semibold text-white hover:text-accent py-2">Contacto</a>
-                <a href="mailto:contact@codesyndicatelatam.com" class="mt-2 text-center w-full py-3 rounded-md bg-primary text-white font-bold">Conectar</a>
+                <a href="mailto:contact@codesyndicatelatam.com"
+                    class="mt-2 text-center w-full py-3 rounded-md bg-primary text-white font-bold">Conectar</a>
             </div>
         </div>
     </nav>
 
     <div id="inicio" class="relative w-full bg-hero-gradient pt-24 pb-32 px-6 text-center overflow-hidden">
-        
+
         <div class="absolute inset-0 pointer-events-none">
-            <div class="absolute inset-0" style="background-image: linear-gradient(rgba(130, 54, 252, 0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(130, 54, 252, 0.15) 1px, transparent 1px); background-size: 50px 50px;"></div>
+            <div class="absolute inset-0"
+                style="background-image: linear-gradient(rgba(130, 54, 252, 0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(130, 54, 252, 0.15) 1px, transparent 1px); background-size: 50px 50px;">
+            </div>
             <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,#0e0e10_80%)]"></div>
         </div>
 
         <div class="relative z-10 max-w-4xl mx-auto flex flex-col gap-8 items-center">
-            
-            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/20 border border-primary/50 backdrop-blur-sm">
+
+            <div
+                class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/20 border border-primary/50 backdrop-blur-sm">
                 <span class="material-symbols-outlined text-[#38bdf8]" style="font-size: 20px;">cloud</span>
                 <span class="text-white text-xs font-bold uppercase tracking-widest">Cloud Native Architecture</span>
             </div>
 
             <h1 class="text-5xl md:text-7xl font-black leading-tight tracking-tight text-white drop-shadow-lg">
                 Infraestructura Digital de <br>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-primary to-accent pb-2">Alta Integridad</span>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-primary to-accent pb-2">Alta
+                    Integridad</span>
             </h1>
 
             <p class="text-text-muted text-lg md:text-xl max-w-2xl leading-relaxed">
                 <span class="text-primary font-bold font-mono text-2xl">{</span>
                 <span class="text-white font-bold font-display tracking-tight">Code Syndicate Latam</span>
-                <span class="text-primary font-bold font-mono text-2xl">}</span> 
-                es un laboratorio de producto que crea tecnología segura y confiable. Diseñamos, construimos y operamos nuestras propias plataformas digitales, impulsando actualmente el ecosistema URBE.
+                <span class="text-primary font-bold font-mono text-2xl">}</span>
+                es un laboratorio de producto que crea tecnología segura y confiable. Diseñamos, construimos y operamos
+                nuestras propias plataformas digitales, impulsando actualmente el ecosistema URBE.
             </p>
 
             <div class="flex flex-col sm:flex-row gap-4 w-full justify-center mt-8">
-                <a href="#contacto" class="px-8 py-4 rounded-lg bg-accent text-bg-main font-bold text-lg hover:bg-yellow-300 transition-all transform hover:-translate-y-1 shadow-[0_0_20px_rgba(251,212,5,0.3)] text-center font-display">
+                <a href="#contacto"
+                    class="px-8 py-4 rounded-lg bg-accent text-bg-main font-bold text-lg hover:bg-yellow-300 transition-all transform hover:-translate-y-1 shadow-[0_0_20px_rgba(251,212,5,0.3)] text-center font-display">
                     Conoce el Laboratorio
                 </a>
-                <a href="#producto" class="px-8 py-4 rounded-lg bg-white/5 text-white border border-white/10 font-bold text-lg hover:bg-white/10 hover:border-primary/50 transition-all backdrop-blur-md text-center font-display">
-                    Ver Proyecto: URBE
+                <a href="#producto"
+                    class="px-8 py-4 rounded-lg bg-white/5 text-white border border-white/10 font-bold text-lg hover:bg-white/10 hover:border-primary/50 transition-all backdrop-blur-md text-center font-display">
+                    Ver Servicios
                 </a>
             </div>
         </div>
@@ -147,366 +195,745 @@
 
     <div id="tecnologia" class="px-6 py-24 max-w-7xl mx-auto scroll-mt-20">
         <div class="mb-16 text-center md:text-left">
-            <span class="text-accent text-xs font-bold tracking-[0.2em] uppercase mb-3 block font-mono">Estándares de Ingeniería</span>
+            <span class="text-accent text-xs font-bold tracking-[0.2em] uppercase mb-3 block font-mono">Estándares de
+                Ingeniería</span>
             <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
-                Nuestros Pilares <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-primary">Tecnológicos</span>
+                Nuestros Pilares <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-white to-primary">Tecnológicos</span>
             </h2>
             <p class="text-text-muted text-lg max-w-2xl mx-auto md:mx-0 leading-relaxed">
-                No escribimos código genérico. Construimos sobre una base de estándares estrictos de seguridad, escalabilidad y veracidad de datos. Estos son los principios que impulsan todas nuestras plataformas.
+                No escribimos código genérico. Construimos sobre una base de estándares estrictos de seguridad,
+                escalabilidad y veracidad de datos. Estos son los principios que impulsan todas nuestras plataformas.
             </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="group p-6 rounded-2xl bg-bg-card/60 backdrop-blur-md border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
-                <div class="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+            <div
+                class="group p-6 rounded-2xl bg-bg-card/60 backdrop-blur-md border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+                <div
+                    class="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
                     <span class="material-symbols-outlined text-primary group-hover:text-white">encrypted</span>
                 </div>
                 <h3 class="text-xl font-bold mb-3 text-white">Seguridad Zero-Trust</h3>
-                <p class="text-text-muted text-sm mb-6 leading-relaxed">Arquitectura donde la identidad es el nuevo perímetro. Implementamos autenticación robusta y cifrado profundo para proteger cada transacción dentro de nuestro ecosistema.</p>
+                <p class="text-text-muted text-sm mb-6 leading-relaxed">Arquitectura donde la identidad es el nuevo
+                    perímetro. Implementamos autenticación robusta y cifrado profundo para proteger cada transacción
+                    dentro de nuestro ecosistema.</p>
                 <div class="flex flex-wrap gap-2 font-mono">
-                    <span class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] text-accent uppercase">OAuth2</span>
-                    <span class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] text-text-muted uppercase">DevSecOps</span>
+                    <span
+                        class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] text-accent uppercase">OAuth2</span>
+                    <span
+                        class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] text-text-muted uppercase">DevSecOps</span>
                 </div>
             </div>
-            <div class="group p-6 rounded-2xl bg-bg-card/60 backdrop-blur-md border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
-                <div class="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+            <div
+                class="group p-6 rounded-2xl bg-bg-card/60 backdrop-blur-md border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+                <div
+                    class="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
                     <span class="material-symbols-outlined text-primary group-hover:text-white">hub</span>
                 </div>
                 <h3 class="text-xl font-bold mb-3 text-white">Integridad de Datos</h3>
-                <p class="text-text-muted text-sm mb-6 leading-relaxed">Sistemas transaccionales diseñados para la veracidad absoluta. Priorizamos la consistencia y la auditoría inmutable en nuestras bases de datos.</p>
+                <p class="text-text-muted text-sm mb-6 leading-relaxed">Sistemas transaccionales diseñados para la
+                    veracidad absoluta. Priorizamos la consistencia y la auditoría inmutable en nuestras bases de datos.
+                </p>
                 <div class="flex flex-wrap gap-2 font-mono">
-                    <span class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] text-accent uppercase">SQL/NoSQL</span>
-                    <span class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] text-text-muted uppercase">Auditable</span>
+                    <span
+                        class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] text-accent uppercase">SQL/NoSQL</span>
+                    <span
+                        class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] text-text-muted uppercase">Auditable</span>
                 </div>
             </div>
-            <div class="group p-6 rounded-2xl bg-bg-card/60 backdrop-blur-md border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
-                <div class="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+            <div
+                class="group p-6 rounded-2xl bg-bg-card/60 backdrop-blur-md border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+                <div
+                    class="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
                     <span class="material-symbols-outlined text-primary group-hover:text-white">cloud_circle</span>
                 </div>
                 <h3 class="text-xl font-bold mb-3 text-white">Infraestructura Cloud Native</h3>
-                <p class="text-text-muted text-sm mb-6 leading-relaxed">Despliegue elástico y resiliente. Utilizamos arquitectura de microservicios y contenedores para asegurar alta disponibilidad global de nuestros productos.</p>
+                <p class="text-text-muted text-sm mb-6 leading-relaxed">Despliegue elástico y resiliente. Utilizamos
+                    arquitectura de microservicios y contenedores para asegurar alta disponibilidad global de nuestros
+                    productos.</p>
                 <div class="flex flex-wrap gap-2 font-mono">
-                    <span class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] text-accent uppercase">Kubernetes</span>
-                    <span class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] text-text-muted uppercase">Docker</span>
+                    <span
+                        class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] text-accent uppercase">Kubernetes</span>
+                    <span
+                        class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] text-text-muted uppercase">Docker</span>
                 </div>
             </div>
-            <div class="group p-6 rounded-2xl bg-bg-card/60 backdrop-blur-md border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
-                <div class="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+            <div
+                class="group p-6 rounded-2xl bg-bg-card/60 backdrop-blur-md border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+                <div
+                    class="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
                     <span class="material-symbols-outlined text-primary group-hover:text-white">code_blocks</span>
                 </div>
                 <h3 class="text-xl font-bold mb-3 text-white">Ingeniería de Producto</h3>
-                <p class="text-text-muted text-sm mb-6 leading-relaxed">Desarrollo agnóstico y adaptable. Seleccionamos el stack tecnológico preciso, que mejor resuelva los desafíos de nuestras iniciativas.</p>
+                <p class="text-text-muted text-sm mb-6 leading-relaxed">Desarrollo agnóstico y adaptable. Seleccionamos
+                    el stack tecnológico preciso, que mejor resuelva los desafíos de nuestras iniciativas.</p>
                 <div class="flex flex-wrap gap-2 font-mono">
-                    <span class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] text-accent uppercase">Java • Node • Py</span>
-                    <span class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] text-text-muted uppercase">React / Angular</span>
-                    <span class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] text-primary uppercase">Agile</span>
+                    <span
+                        class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] text-accent uppercase">Java
+                        • Node • Py</span>
+                    <span
+                        class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] text-text-muted uppercase">React
+                        / Angular</span>
+                    <span
+                        class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] text-primary uppercase">Agile</span>
                 </div>
             </div>
         </div>
     </div>
 
-    <div id="producto" class="w-full py-24 px-6 bg-[#0e0e10] border-t border-white/5">
-        
-        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <!-- Odoo CRM Services Section -->
+    <div id="odoo-crm" class="px-6 py-24 max-w-7xl mx-auto scroll-mt-20">
+        <div class="mb-16 text-center md:text-left">
+            <span class="text-accent text-xs font-bold tracking-[0.2em] uppercase mb-3 block font-mono">Transformación
+                Digital</span>
+            <div class="flex flex-col md:flex-row items-center md:items-start justify-between gap-8 w-full">
 
-            <div class="order-1 flex justify-center">
-                <img src="img/urbe/urbe_platform.jpg" alt="URBE App Interface" class="w-full max-w-md h-auto object-contain">
-            </div>
-            
-            <div class="flex flex-col gap-6 order-2">
-                <span class="text-accent text-xs font-bold tracking-[0.2em] uppercase mb-3 block font-mono">Iniciativa Principal</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
-                    URBE: <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-primary">Ecosistema PropTech</span>
-                </h2>
-                <p class="text-text-muted text-lg leading-relaxed border-l-2 border-primary/30 pl-6">
-                    La plataforma que blinda la operación de <strong>Agentes Inmobiliarios y Propietarios</strong>. 
-                    Creamos un entorno seguro para vender y arrendar, garantizando la veracidad absoluta de la información para compradores y arrendatarios.
-                </p>
+                <div class="flex-1 text-center md:text-left">
+                    <h2
+                        class="text-3xl md:text-4xl font-bold text-white mb-4 flex flex-col md:flex-row items-center justify-center md:justify-start gap-4">
+                        <span>Implementación <span
+                                class="text-transparent bg-clip-text bg-gradient-to-r from-white to-primary">Odoo CRM &
+                                ERP</span></span>
+                    </h2>
 
-                <div class="flex flex-col gap-5 mt-4">
-                    
-                    <div class="flex items-start gap-4 group">
-                        <div class="w-10 h-10 min-w-[2.5rem] rounded-lg bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-primary/50 transition-colors mt-1">
-                            <span class="material-symbols-outlined text-primary text-xl">real_estate_agent</span>
-                        </div>
-                        <div>
-                            <h4 class="text-white font-bold text-sm mb-1">Gestión Segura para Agentes</h4>
-                            <p class="text-text-muted text-xs leading-relaxed">Herramientas de validación que protegen la captación y cierre de negocios del profesional inmobiliario.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="flex items-start gap-4 group">
-                        <div class="w-10 h-10 min-w-[2.5rem] rounded-lg bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-primary/50 transition-colors mt-1">
-                            <span class="material-symbols-outlined text-primary text-xl">verified</span>
-                        </div>
-                        <div>
-                            <h4 class="text-white font-bold text-sm mb-1">Veracidad de Datos</h4>
-                            <p class="text-text-muted text-xs leading-relaxed">Información certificada y transparente para que compradores y arrendatarios tomen decisiones sin riesgo.</p>
-                        </div>
-                    </div>
+                    <p class="text-text-muted text-lg max-w-2xl mx-auto md:mx-0 leading-relaxed">
+                        Centralizamos y optimizamos todos los procesos de tu negocio. Desde las ventas y atención al
+                        cliente hasta la gestión de inventario y contabilidad, todo en una única plataforma potente y
+                        fácil de usar.
+                    </p>
+                </div>
 
-                    <div class="flex items-start gap-4 group">
-                        <div class="w-10 h-10 min-w-[2.5rem] rounded-lg bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-primary/50 transition-colors mt-1">
-                            <span class="material-symbols-outlined text-primary text-xl">shield_lock</span>
-                        </div>
-                        <div>
-                            <h4 class="text-white font-bold text-sm mb-1">Transacciones Protegidas</h4>
-                            <p class="text-text-muted text-xs leading-relaxed">Un ecosistema donde la identidad de todas las partes (propietario, agente, cliente) es clara y confiable.</p>
-                        </div>
-                    </div>
+                <div class="flex-shrink-0 flex items-center justify-center w-full md:w-auto mt-6 md:mt-0">
+                    <img src="img/csl_logo/odoo_certi-removebg-pre.webp" alt="Odoo"
+                        class="h-32 md:h-28 block object-contain">
                 </div>
             </div>
+            <br>
+            <br>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div
+                    class="group p-6 rounded-2xl bg-bg-card/60 backdrop-blur-md border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <span class="material-symbols-outlined text-primary group-hover:text-white">point_of_sale</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Ventas y CRM</h3>
+                    <p class="text-text-muted text-sm leading-relaxed">Automatiza tus procesos de venta, gestiona tus
+                        clientes potenciales, realiza seguimientos precisos y cierra más negocios de manera eficiente y
+                        centralizada.</p>
+                </div>
 
-        </div>
-    </div>
+                <div
+                    class="group p-6 rounded-2xl bg-bg-card/60 backdrop-blur-md border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <span class="material-symbols-outlined text-primary group-hover:text-white">inventory_2</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Inventario y Compras</h3>
+                    <p class="text-text-muted text-sm leading-relaxed">Mantén un control total de tu stock en tiempo
+                        real,
+                        automatiza las reglas de reabastecimiento y mejora la relación con tus proveedores desde un solo
+                        lugar.</p>
+                </div>
 
-    <div id="equipo" class="relative w-full py-24 border-t border-white/5 scroll-mt-20">
-        <div class="absolute inset-0 bg-bg-main/50"></div>
-        <div class="relative z-10 px-6 max-w-7xl mx-auto">
-            
-            <div class="mb-16 text-center md:text-left">
-                <span class="text-accent text-xs font-bold tracking-[0.2em] uppercase mb-3 block font-mono">Builders & Founders</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-white">
-                    Ingeniería <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-primary">Distribuida</span>
-                </h2>
-                <p class="text-text-muted mt-4 max-w-2xl mx-auto md:mx-0 leading-relaxed">
-                    Un equipo técnico de alta performance operando estratégicamente desde Chile (HQ) y Colombia (R&D Hub). Unimos visión de producto y arquitectura de software radical para construir el ecosistema URBE.
-                </p>
+                <div
+                    class="group p-6 rounded-2xl bg-bg-card/60 backdrop-blur-md border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                        <span
+                            class="material-symbols-outlined text-primary group-hover:text-white">account_balance</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Contabilidad y Finanzas</h3>
+                    <p class="text-text-muted text-sm leading-relaxed">Gestiona tu facturación, controla gastos y
+                        visualiza
+                        informes financieros en tiempo real con una herramienta de contabilidad integrada y sin
+                        complicaciones.</p>
+                </div>
             </div>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
-                
-                <div class="group relative p-6 rounded-2xl bg-bg-card border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
-                    <div class="flex items-start justify-between mb-4">
-                        <img src="img/team_pictures/fidel.jpeg" alt="Fidel Vera" class="w-20 h-20 rounded-full object-cover border-2 border-white/10 group-hover:border-primary transition-colors">
-                        <a href="https://www.linkedin.com/in/fidelverachourio/" class="text-text-muted hover:text-[#0077b5] transition-colors"><span class="material-symbols-outlined">link</span></a>
-                    </div>
-                    <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">Fidel Vera</h3>
-                    <p class="text-white text-xs font-bold uppercase tracking-wider mt-1 font-mono">CEO & Co-Founder</p>
-                    <div class="mt-4 pt-4 border-t border-white/5">
-                        <p class="text-text-muted text-sm"><span class="text-accent">•</span> Estrategia de Producto y Visión Corporativa.</p>
-                    </div>
+            <div class="mt-10 mb-16 flex justify-center w-full px-4">
+                <div
+                    class="w-full max-w-3xl rounded-2xl overflow-hidden border border-white/10 shadow-[0_10px_40px_rgba(0,0,0,0.5)]">
+                    <video src="video/video_homepage.webm" autoplay loop muted playsinline
+                        class="w-full h-auto block opacity-90 hover:opacity-100 transition-opacity duration-500"></video>
                 </div>
-
-                <div class="group relative p-6 rounded-2xl bg-bg-card border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
-                    <div class="flex items-start justify-between mb-4">
-                        <img src="img/team_pictures/julio.jpeg" alt="Julio Alvarez" class="w-20 h-20 rounded-full object-cover border-2 border-white/10 group-hover:border-primary transition-colors">
-                        <a href="https://www.linkedin.com/in/ing-julio-alvarez-t/" class="text-text-muted hover:text-[#0077b5] transition-colors"><span class="material-symbols-outlined">link</span></a>
-                    </div>
-                    <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">Julio Alvarez</h3>
-                    <p class="text-white text-xs font-bold uppercase tracking-wider mt-1 font-mono">CTO & Co-Founder</p>
-                    <div class="mt-4 pt-4 border-t border-white/5">
-                        <p class="text-text-muted text-sm"><span class="text-accent">•</span> Liderazgo de Ingeniería y Estrategia Tecnológica.</p>
-                    </div>
-                </div>
-
-                <div class="group relative p-6 rounded-2xl bg-bg-card border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
-                    <div class="flex items-start justify-between mb-4">
-                        <img src="img/team_pictures/juan.jpeg" alt="Juan Carlos Avila" class="w-20 h-20 rounded-full object-cover border-2 border-white/10 group-hover:border-primary transition-colors">
-                        <a href="https://www.linkedin.com/in/avilameza79/" class="text-text-muted hover:text-[#0077b5] transition-colors"><span class="material-symbols-outlined">link</span></a>
-                    </div>
-                    <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">Juan Carlos Avila</h3>
-                    <p class="text-white text-xs font-bold uppercase tracking-wider mt-1 font-mono">CSA & Co-Founder</p>
-                    <div class="mt-4 pt-4 border-t border-white/5">
-                        <p class="text-text-muted text-sm"><span class="text-accent">•</span> Chief Software Architect - Infraestructura y Escalabilidad.</p>
-                    </div>
-                </div>
-
-                <div class="group relative p-6 rounded-2xl bg-bg-card border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
-                    <div class="flex items-start justify-between mb-4">
-                        <img src="img/team_pictures/lizeth.jpeg" alt="Lizeth Monroy" class="w-20 h-20 rounded-full object-cover border-2 border-white/10 group-hover:border-primary transition-colors">
-                        <a href="https://www.linkedin.com/in/lizeth-nathaly-monroy-m/" class="text-text-muted hover:text-[#0077b5] transition-colors"><span class="material-symbols-outlined">link</span></a>
-                    </div>
-                    <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">Lizeth Monroy</h3>
-                    <p class="text-white text-xs font-bold uppercase tracking-wider mt-1 font-mono">Head of Product</p>
-                    <div class="mt-4 pt-4 border-t border-white/5">
-                        <p class="text-text-muted text-sm"><span class="text-accent">•</span> Estrategia de Usuario, UX y Roadmap de Producto.</p>
-                    </div>
-                </div>
-
-                <div class="group relative p-6 rounded-2xl bg-bg-card border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
-                    <div class="flex items-start justify-between mb-4">
-                        <img src="img/team_pictures/raul.jpeg" alt="Raul Almao" class="w-20 h-20 rounded-full object-cover border-2 border-white/10 group-hover:border-primary transition-colors">
-                        <a href="https://www.linkedin.com/in/ralmao/" class="text-text-muted hover:text-[#0077b5] transition-colors"><span class="material-symbols-outlined">link</span></a>
-                    </div>
-                    <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">Raul Almao</h3>
-                    <p class="text-white text-xs font-bold uppercase tracking-wider mt-1 font-mono">Head of Cybersecurity</p>
-                    <div class="mt-4 pt-4 border-t border-white/5">
-                        <p class="text-text-muted text-sm"><span class="text-accent">•</span> DevSecOps & Penetration Tester, Protección de Datos y Compliance.</p>
-                    </div>
-                </div>
-
-                <div class="group relative p-6 rounded-2xl bg-bg-card border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
-                    <div class="flex items-start justify-between mb-4">
-                        <img src="img/team_pictures/jaider.jpeg" alt="Jaider Vergara" class="w-20 h-20 rounded-full object-cover border-2 border-white/10 group-hover:border-primary transition-colors">
-                        <a href="https://www.linkedin.com/in/jaider-david-vargas-noriega-226a7925a/" class="text-text-muted hover:text-[#0077b5] transition-colors"><span class="material-symbols-outlined">link</span></a>
-                    </div>
-                    <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">Jaider Vargas</h3>
-                    <p class="text-white text-xs font-bold uppercase tracking-wider mt-1 font-mono">Founding Engineer</p>
-                    <div class="mt-4 pt-4 border-t border-white/5">
-                        <p class="text-text-muted text-sm"><span class="text-accent">•</span> Desarrollo Backend y Arquitectura de Sistemas.</p>
-                    </div>
-                </div>
-
             </div>
         </div>
-    </div>
 
-    <div id="contacto" class="relative w-full py-24 px-6 bg-[#0e0e10] border-t border-white/5">
-                
-        <div class="absolute bottom-0 left-0 w-1/3 h-full bg-primary/5 blur-[100px] pointer-events-none"></div>
+        <div id="producto" class="w-full py-24 px-6 bg-[#0e0e10] border-t border-white/5 relative overflow-hidden">
 
-        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <!-- Background decorative elements -->
+            <div class="absolute top-0 right-0 w-1/3 h-full bg-primary/5 blur-[100px] pointer-events-none"></div>
+            <div class="absolute bottom-0 left-0 w-1/4 h-1/2 bg-accent/5 blur-[80px] pointer-events-none"></div>
 
-            <div class="flex flex-col justify-center">
-                <span class="text-accent text-xs font-bold tracking-[0.2em] uppercase mb-3 block font-mono">Conectar</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-white">
-                    Interesado en el futuro de <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-primary">PropTech?</span>
-                </h2>
-                <br>
-                <p class="text-text-muted text-lg leading-relaxed mb-8">
-                    Estamos abriendo el acceso anticipado para <strong>URBE</strong>. Si eres inversor, aliado estratégico o quieres conocer nuestra arquitectura, conversemos directamente.
-                </p>
-
-                <div class="flex flex-col gap-4 border-t border-white/10 pt-8">
-                    <div class="flex items-start gap-4">
-                        <div class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-primary">
-                            <span class="material-symbols-outlined">mail</span>
-                        </div>
-                        <div>
-                            <h4 class="text-white font-bold text-sm">Email Directo</h4>
-                            <a href="mailto:contact@codesyndicatelatam.com" class="text-text-muted text-sm hover:text-primary transition-colors">
-                                contact@codesyndicatelatam.com
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="flex items-start gap-4">
-                        <div class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-primary">
-                            <span class="material-symbols-outlined">dns</span>
-                        </div>
-                        <div>
-                            <h4 class="text-white font-bold text-sm">Operación Distribuida</h4>
-                            <p class="text-text-muted text-xs">HQ: Santiago, Chile <br> R&D Hub: Bogotá, Colombia</p>
-                        </div>
-                    </div>
+            <div class="max-w-7xl mx-auto scroll-mt-20">
+                <div class="mb-16 text-center md:text-left">
+                    <span class="text-accent text-xs font-bold tracking-[0.2em] uppercase mb-3 block font-mono">Nuestros
+                        Servicios</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+                        Soluciones <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-white to-primary">Tecnológicas</span>
+                    </h2>
+                    <p class="text-text-muted text-lg max-w-2xl mx-auto md:mx-0 leading-relaxed">
+                        Transformamos la complejidad tecnológica en soluciones simples y efectivas para tu negocio.
+                    </p>
                 </div>
-            </div>
 
-            <div class="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-md shadow-2xl">
-                <form action="https://formsubmit.co/contact@codesyndicatelatam.com" method="POST" class="flex flex-col gap-6">
-                    
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_subject" value="Nuevo Mensaje desde Web Code Syndicate">
-                    <div class="flex flex-col gap-2">
-                        <label for="name" class="text-xs font-bold text-white uppercase tracking-wider">Nombre</label>
-                        <input type="text" name="name" id="name" required placeholder="Tu nombre" 
-                            class="w-full px-4 py-3 rounded-lg bg-[#0e0e10] border border-white/10 text-white placeholder-gray-600 focus:outline-none focus:border-primary transition-colors">
+                <!-- Carousel Container -->
+                <div class="relative w-full">
+                    <!-- Carousel Tracks -->
+                    <div class="overflow-hidden rounded-2xl">
+                        <div id="services-carousel" class="flex transition-transform duration-500 ease-out"
+                            style="transform: translateX(0%);">
+
+                            <!-- Slide 1: Odoo -->
+                            <div class="w-full flex-shrink-0 px-4">
+                                <div
+                                    class="bg-bg-card/60 backdrop-blur-md border border-white/10 rounded-2xl p-8 md:p-12 flex flex-col md:flex-row gap-8 items-center hover:border-primary/50 transition-colors h-full">
+                                    <div
+                                        class="w-20 h-20 md:w-32 md:h-32 flex-shrink-0 rounded-2xl bg-gradient-to-br from-primary/20 to-transparent border border-primary/30 flex items-center justify-center shadow-[0_0_30px_rgba(130,54,252,0.2)]">
+                                        <span
+                                            class="material-symbols-outlined text-4xl md:text-6xl text-white">dashboard_customize</span>
+                                    </div>
+                                    <div class="flex-1 text-center md:text-left">
+                                        <h3 class="text-2xl md:text-3xl font-bold text-white mb-4">Implementación de
+                                            Odoo
+                                        </h3>
+                                        <p class="text-text-muted text-base md:text-lg leading-relaxed">
+                                            Digitalizamos y organizamos toda tu empresa en un solo sistema. Olvídate de
+                                            usar
+                                            múltiples programas para ventas, inventario y contabilidad. Todo en un solo
+                                            lugar, fácil de usar.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 2: Gobernanza en TI -->
+                            <div class="w-full flex-shrink-0 px-4">
+                                <div
+                                    class="bg-bg-card/60 backdrop-blur-md border border-white/10 rounded-2xl p-8 md:p-12 flex flex-col md:flex-row gap-8 items-center hover:border-primary/50 transition-colors h-full">
+                                    <div
+                                        class="w-20 h-20 md:w-32 md:h-32 flex-shrink-0 rounded-2xl bg-gradient-to-br from-accent/20 to-transparent border border-accent/30 flex items-center justify-center shadow-[0_0_30px_rgba(251,212,5,0.2)]">
+                                        <span
+                                            class="material-symbols-outlined text-4xl md:text-6xl text-white">account_tree</span>
+                                    </div>
+                                    <div class="flex-1 text-center md:text-left">
+                                        <h3 class="text-2xl md:text-3xl font-bold text-white mb-4">Gobernanza en TI</h3>
+                                        <p class="text-text-muted text-base md:text-lg leading-relaxed">
+                                            Alineamos la tecnología con los objetivos de tu negocio. Te ayudamos a tomar
+                                            mejores decisiones para que tu inversión tecnológica sea segura, eficiente y
+                                            sin
+                                            sorpresas.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 3: Ciberseguridad -->
+                            <div class="w-full flex-shrink-0 px-4">
+                                <div
+                                    class="bg-bg-card/60 backdrop-blur-md border border-white/10 rounded-2xl p-8 md:p-12 flex flex-col md:flex-row gap-8 items-center hover:border-primary/50 transition-colors h-full">
+                                    <div
+                                        class="w-20 h-20 md:w-32 md:h-32 flex-shrink-0 rounded-2xl bg-gradient-to-br from-red-500/20 to-transparent border border-red-500/30 flex items-center justify-center shadow-[0_0_30px_rgba(239,68,68,0.2)]">
+                                        <span
+                                            class="material-symbols-outlined text-4xl md:text-6xl text-white">security</span>
+                                    </div>
+                                    <div class="flex-1 text-center md:text-left">
+                                        <h3 class="text-2xl md:text-3xl font-bold text-white mb-4">Ciberseguridad y
+                                            Hacking
+                                            Ético</h3>
+                                        <p class="text-text-muted text-base md:text-lg leading-relaxed">
+                                            Protegemos tu información como si fuera nuestra. Encontramos y reparamos las
+                                            debilidades de tus sistemas antes de que alguien más lo haga.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 4: Product Lab -->
+                            <div class="w-full flex-shrink-0 px-4">
+                                <div
+                                    class="bg-bg-card/60 backdrop-blur-md border border-white/10 rounded-2xl p-8 md:p-12 flex flex-col md:flex-row gap-8 items-center hover:border-primary/50 transition-colors h-full">
+                                    <div
+                                        class="w-20 h-20 md:w-32 md:h-32 flex-shrink-0 rounded-2xl bg-gradient-to-br from-blue-500/20 to-transparent border border-blue-500/30 flex items-center justify-center shadow-[0_0_30px_rgba(59,130,246,0.2)]">
+                                        <span
+                                            class="material-symbols-outlined text-4xl md:text-6xl text-white">science</span>
+                                    </div>
+                                    <div class="flex-1 text-center md:text-left">
+                                        <h3 class="text-2xl md:text-3xl font-bold text-white mb-4">Product Lab (InmoBot)
+                                        </h3>
+                                        <p class="text-text-muted text-base md:text-lg leading-relaxed">
+                                            Creamos productos digitales innovadores. Como InmoBot, un asistente
+                                            inteligente
+                                            diseñado para revolucionar y facilitar el sector inmobiliario.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 5: Data Science y AI -->
+                            <div class="w-full flex-shrink-0 px-4">
+                                <div
+                                    class="bg-bg-card/60 backdrop-blur-md border border-white/10 rounded-2xl p-8 md:p-12 flex flex-col md:flex-row gap-8 items-center hover:border-primary/50 transition-colors h-full">
+                                    <div
+                                        class="w-20 h-20 md:w-32 md:h-32 flex-shrink-0 rounded-2xl bg-gradient-to-br from-purple-500/20 to-transparent border border-purple-500/30 flex items-center justify-center shadow-[0_0_30px_rgba(168,85,247,0.2)]">
+                                        <span
+                                            class="material-symbols-outlined text-4xl md:text-6xl text-white">psychology</span>
+                                    </div>
+                                    <div class="flex-1 text-center md:text-left">
+                                        <h3 class="text-2xl md:text-3xl font-bold text-white mb-4">Data Science y AI
+                                        </h3>
+                                        <p class="text-text-muted text-base md:text-lg leading-relaxed">
+                                            Convertimos tus datos en predicciones y automatización. Usamos inteligencia
+                                            artificial para que tu negocio trabaje de forma más inteligente, no más
+                                            dura.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
 
-                    <div class="flex flex-col gap-2">
-                        <label for="email" class="text-xs font-bold text-white uppercase tracking-wider">Email Corporativo</label>
-                        <input type="email" name="email" id="email" required placeholder="nombre@empresa.com" 
-                            class="w-full px-4 py-3 rounded-lg bg-[#0e0e10] border border-white/10 text-white placeholder-gray-600 focus:outline-none focus:border-primary transition-colors">
-                    </div>
-
-                    <div class="flex flex-col gap-2">
-                        <label for="message" class="text-xs font-bold text-white uppercase tracking-wider">Mensaje</label>
-                        <textarea name="message" id="message" rows="4" required placeholder="¿Cómo podemos colaborar?" 
-                                class="w-full px-4 py-3 rounded-lg bg-[#0e0e10] border border-white/10 text-white placeholder-gray-600 focus:outline-none focus:border-primary transition-colors resize-none"></textarea>
-                    </div>
-
-                    <button type="submit" class="w-full py-4 rounded-lg bg-white text-bg-main font-bold hover:bg-gray-200 transition-all transform hover:-translate-y-1 shadow-lg mt-2">
-                        Enviar Mensaje
+                    <!-- Navigation Buttons -->
+                    <button id="carousel-prev"
+                        class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 md:-translate-x-6 w-12 h-12 rounded-full bg-bg-main/80 border border-white/10 text-white flex items-center justify-center hover:bg-primary hover:border-primary transition-all backdrop-blur-md z-10 shadow-lg">
+                        <span class="material-symbols-outlined">chevron_left</span>
                     </button>
-                    
-                    <p class="text-[10px] text-center text-gray-500 mt-2">
-                        Protegido por políticas de privacidad Zero-Trust.
-                    </p>
-                </form>
-            </div>
+                    <button id="carousel-next"
+                        class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 md:translate-x-6 w-12 h-12 rounded-full bg-bg-main/80 border border-white/10 text-white flex items-center justify-center hover:bg-primary hover:border-primary transition-all backdrop-blur-md z-10 shadow-lg">
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </button>
 
-        </div>
-    </div>
-
-    <footer class="bg-bg-main border-t border-white/10 pt-16 pb-8">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-                
-                <div class="flex flex-col items-start">
-                    <img src="img/csl_logo/csl_logo.png" alt="Code Syndicate Latam" class="w-56 h-auto mb-6 opacity-90 hover:opacity-100 transition-opacity">
-                    <p class="text-text-muted text-sm leading-relaxed max-w-xs">
-                        Laboratorio de ingeniería de software enfocado en infraestructura crítica y productos propios.
-                    </p>
-                </div>
-
-                <div>
-                    <h4 class="text-white font-bold mb-6 tracking-wider text-sm uppercase font-mono">Explorar</h4>
-                    <ul class="flex flex-col gap-3">
-                        <li><a href="#inicio" class="text-text-muted text-sm hover:text-primary transition-colors">Inicio</a></li>
-                        <li><a href="#tecnologia" class="text-text-muted text-sm hover:text-primary transition-colors">Tecnología</a></li>
-                        <li><a href="#producto" class="text-text-muted text-sm hover:text-primary transition-colors">Producto</a></li>
-                        <li><a href="#equipo" class="text-text-muted text-sm hover:text-primary transition-colors">Liderazgo</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="text-white font-bold mb-6 tracking-wider text-sm uppercase font-mono">Empresa</h4>
-                    <ul class="flex flex-col gap-3">
-                        <li><a href="mailto:support@codesyndicatelatam.com" class="text-text-muted text-sm hover:text-accent transition-colors">Centro de Ayuda</a></li>
-                        <li><span class="text-text-muted text-sm cursor-not-allowed opacity-50">Términos de Servicio</span></li>
-                        <li><span class="text-text-muted text-sm cursor-not-allowed opacity-50">Política de Privacidad</span></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="text-white font-bold mb-6 tracking-wider text-sm uppercase font-mono">Conectar</h4>
-                    <div class="flex flex-col gap-4">
-                        <a href="mailto:contact@codesyndicatelatam.com" class="flex items-center gap-3 group">
-                            <div class="w-8 h-8 rounded bg-white/5 flex items-center justify-center group-hover:bg-primary transition-colors">
-                                <span class="material-symbols-outlined text-sm text-white">mail</span>
-                            </div>
-                            <span class="text-text-muted text-sm group-hover:text-white transition-colors">contact@codesyndicatelatam.com</span>
-                        </a>
-                        <div class="flex items-center gap-3 group">
-                            <div class="w-8 h-8 rounded bg-white/5 flex items-center justify-center">
-                                <span class="material-symbols-outlined text-sm text-white">location_on</span>
-                            </div>
-                            <p class="text-text-muted text-xs">HQ: Santiago, Chile <br> R&D Hub: Bogotá, Colombia</p>
-                        </div>
-                        <div class="flex gap-4 mt-2">
-                            <a href="#" class="text-text-muted hover:text-[#0077b5] transition-colors"><span class="material-symbols-outlined">link</span></a>
-                            <a href="#" class="text-text-muted hover:text-white transition-colors"><span class="material-symbols-outlined">code</span></a>
-                        </div>
+                    <!-- Dots -->
+                    <div class="flex justify-center gap-3 mt-8" id="carousel-dots">
+                        <button class="w-3 h-3 rounded-full bg-primary transition-all"
+                            aria-label="Go to slide 1"></button>
+                        <button class="w-3 h-3 rounded-full bg-white/20 hover:bg-white/50 transition-all"
+                            aria-label="Go to slide 2"></button>
+                        <button class="w-3 h-3 rounded-full bg-white/20 hover:bg-white/50 transition-all"
+                            aria-label="Go to slide 3"></button>
+                        <button class="w-3 h-3 rounded-full bg-white/20 hover:bg-white/50 transition-all"
+                            aria-label="Go to slide 4"></button>
+                        <button class="w-3 h-3 rounded-full bg-white/20 hover:bg-white/50 transition-all"
+                            aria-label="Go to slide 5"></button>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-text-muted text-xs">&copy; 2026 Code Syndicate Latam. Todos los derechos reservados.</p>
-                <div class="flex items-center gap-2">
-                    <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                    <span class="text-xs text-text-muted font-mono">All Systems Operational</span>
+        <div id="equipo" class="relative w-full py-24 border-t border-white/5 scroll-mt-20">
+            <div class="absolute inset-0 bg-bg-main/50"></div>
+            <div class="relative z-10 px-6 max-w-7xl mx-auto">
+
+                <div class="mb-16 text-center md:text-left">
+                    <span class="text-accent text-xs font-bold tracking-[0.2em] uppercase mb-3 block font-mono">Builders
+                        &
+                        Founders</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">
+                        Ingeniería <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-white to-primary">Distribuida</span>
+                    </h2>
+                    <p class="text-text-muted mt-4 max-w-2xl mx-auto md:mx-0 leading-relaxed">
+                        Un equipo técnico de alta performance operando estratégicamente desde Chile (HQ) y Colombia (R&D
+                        Hub). Unimos visión de producto y arquitectura de software radical para construir el ecosistema
+                        URBE.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
+
+                    <div
+                        class="group relative p-6 rounded-2xl bg-bg-card border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+                        <div class="flex items-start justify-between mb-4">
+                            <img src="img/team_pictures/fidel.jpeg" alt="Fidel Vera"
+                                class="w-20 h-20 rounded-full object-cover border-2 border-white/10 group-hover:border-primary transition-colors">
+                            <a href="https://www.linkedin.com/in/fidelverachourio/"
+                                class="text-text-muted hover:text-[#0077b5] transition-colors"><span
+                                    class="material-symbols-outlined">link</span></a>
+                        </div>
+                        <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">Fidel Vera
+                        </h3>
+                        <p class="text-white text-xs font-bold uppercase tracking-wider mt-1 font-mono">CEO & Co-Founder
+                        </p>
+                        <div class="mt-4 pt-4 border-t border-white/5">
+                            <p class="text-text-muted text-sm"><span class="text-accent">•</span> Estrategia de Producto
+                                y
+                                Visión Corporativa.</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="group relative p-6 rounded-2xl bg-bg-card border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+                        <div class="flex items-start justify-between mb-4">
+                            <img src="img/team_pictures/julio.jpeg" alt="Julio Alvarez"
+                                class="w-20 h-20 rounded-full object-cover border-2 border-white/10 group-hover:border-primary transition-colors">
+                            <a href="https://www.linkedin.com/in/ing-julio-alvarez-t/"
+                                class="text-text-muted hover:text-[#0077b5] transition-colors"><span
+                                    class="material-symbols-outlined">link</span></a>
+                        </div>
+                        <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">Julio
+                            Alvarez
+                        </h3>
+                        <p class="text-white text-xs font-bold uppercase tracking-wider mt-1 font-mono">CTO & Co-Founder
+                        </p>
+                        <div class="mt-4 pt-4 border-t border-white/5">
+                            <p class="text-text-muted text-sm"><span class="text-accent">•</span> Liderazgo de
+                                Ingeniería y
+                                Estrategia Tecnológica.</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="group relative p-6 rounded-2xl bg-bg-card border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+                        <div class="flex items-start justify-between mb-4">
+                            <img src="img/team_pictures/juan.jpeg" alt="Juan Carlos Avila"
+                                class="w-20 h-20 rounded-full object-cover border-2 border-white/10 group-hover:border-primary transition-colors">
+                            <a href="https://www.linkedin.com/in/avilameza79/"
+                                class="text-text-muted hover:text-[#0077b5] transition-colors"><span
+                                    class="material-symbols-outlined">link</span></a>
+                        </div>
+                        <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">Juan Carlos
+                            Avila</h3>
+                        <p class="text-white text-xs font-bold uppercase tracking-wider mt-1 font-mono">CSA & Co-Founder
+                        </p>
+                        <div class="mt-4 pt-4 border-t border-white/5">
+                            <p class="text-text-muted text-sm"><span class="text-accent">•</span> Chief Software
+                                Architect -
+                                Infraestructura y Escalabilidad.</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="group relative p-6 rounded-2xl bg-bg-card border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+                        <div class="flex items-start justify-between mb-4">
+                            <img src="img/team_pictures/lizeth.jpeg" alt="Lizeth Monroy"
+                                class="w-20 h-20 rounded-full object-cover border-2 border-white/10 group-hover:border-primary transition-colors">
+                            <a href="https://www.linkedin.com/in/lizeth-nathaly-monroy-m/"
+                                class="text-text-muted hover:text-[#0077b5] transition-colors"><span
+                                    class="material-symbols-outlined">link</span></a>
+                        </div>
+                        <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">Lizeth
+                            Monroy
+                        </h3>
+                        <p class="text-white text-xs font-bold uppercase tracking-wider mt-1 font-mono">Head of Product
+                        </p>
+                        <div class="mt-4 pt-4 border-t border-white/5">
+                            <p class="text-text-muted text-sm"><span class="text-accent">•</span> Estrategia de Usuario,
+                                UX
+                                y Roadmap de Producto.</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="group relative p-6 rounded-2xl bg-bg-card border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+                        <div class="flex items-start justify-between mb-4">
+                            <img src="img/team_pictures/raul.jpeg" alt="Raul Almao"
+                                class="w-20 h-20 rounded-full object-cover border-2 border-white/10 group-hover:border-primary transition-colors">
+                            <a href="https://www.linkedin.com/in/ralmao/"
+                                class="text-text-muted hover:text-[#0077b5] transition-colors"><span
+                                    class="material-symbols-outlined">link</span></a>
+                        </div>
+                        <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">Raul Almao
+                        </h3>
+                        <p class="text-white text-xs font-bold uppercase tracking-wider mt-1 font-mono">Head of
+                            Cybersecurity</p>
+                        <div class="mt-4 pt-4 border-t border-white/5">
+                            <p class="text-text-muted text-sm"><span class="text-accent">•</span> DevSecOps &
+                                Penetration
+                                Tester, Protección de Datos y Compliance.</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="group relative p-6 rounded-2xl bg-bg-card border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+                        <div class="flex items-start justify-between mb-4">
+                            <img src="img/team_pictures/brayan.jpg" alt="Brayan Bravo"
+                                class="w-20 h-20 rounded-full object-cover border-2 border-white/10 group-hover:border-primary transition-colors">
+                            <a href="https://www.linkedin.com/in/brayan-mateo-bravo-losada-14971a216/"
+                                class="text-text-muted hover:text-[#0077b5] transition-colors"><span
+                                    class="material-symbols-outlined">link</span></a>
+                        </div>
+                        <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">Brayan Bravo
+                        </h3>
+                        <p class="text-white text-xs font-bold uppercase tracking-wider mt-1 font-mono">Founding
+                            Engineer
+                        </p>
+                        <div class="mt-4 pt-4 border-t border-white/5">
+                            <p class="text-text-muted text-sm"><span class="text-accent">•</span> Desarrollo Backend y
+                                Arquitectura de Sistemas.</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
-    </footer>
 
-    <script>
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
+        <div id="contacto" class="relative w-full py-24 px-6 bg-[#0e0e10] border-t border-white/5">
 
-        if(btn && menu) {
-            btn.addEventListener('click', () => {
-                menu.classList.toggle('hidden');
-            });
-            // Cierra el menú al hacer clic en cualquier enlace
-            menu.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    menu.classList.add('hidden');
+            <div class="absolute bottom-0 left-0 w-1/3 h-full bg-primary/5 blur-[100px] pointer-events-none"></div>
+
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
+
+                <div class="flex flex-col justify-center">
+                    <span
+                        class="text-accent text-xs font-bold tracking-[0.2em] uppercase mb-3 block font-mono">Conectar</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">
+                        Interesado en el futuro de <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-white to-primary">PropTech?</span>
+                    </h2>
+                    <br>
+                    <p class="text-text-muted text-lg leading-relaxed mb-8">
+                        Estamos abriendo el acceso anticipado para <strong>URBE</strong>. Si eres inversor, aliado
+                        estratégico o quieres conocer nuestra arquitectura, conversemos directamente.
+                    </p>
+
+                    <div class="flex flex-col gap-4 border-t border-white/10 pt-8">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined">mail</span>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-sm">Email Directo</h4>
+                                <a href="mailto:contact@codesyndicatelatam.com"
+                                    class="text-text-muted text-sm hover:text-primary transition-colors">
+                                    contact@codesyndicatelatam.com
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined">dns</span>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-sm">Operación Distribuida</h4>
+                                <p class="text-text-muted text-xs">HQ: Santiago, Chile <br> R&D Hub: Bogotá, Colombia
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-md shadow-2xl">
+                    <form action="https://formsubmit.co/contact@codesyndicatelatam.com" method="POST"
+                        class="flex flex-col gap-6">
+
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_subject" value="Nuevo Mensaje desde Web Code Syndicate">
+                        <div class="flex flex-col gap-2">
+                            <label for="name"
+                                class="text-xs font-bold text-white uppercase tracking-wider">Nombre</label>
+                            <input type="text" name="name" id="name" required placeholder="Tu nombre"
+                                class="w-full px-4 py-3 rounded-lg bg-[#0e0e10] border border-white/10 text-white placeholder-gray-600 focus:outline-none focus:border-primary transition-colors">
+                        </div>
+
+                        <div class="flex flex-col gap-2">
+                            <label for="email" class="text-xs font-bold text-white uppercase tracking-wider">Email
+                                Corporativo</label>
+                            <input type="email" name="email" id="email" required placeholder="nombre@empresa.com"
+                                class="w-full px-4 py-3 rounded-lg bg-[#0e0e10] border border-white/10 text-white placeholder-gray-600 focus:outline-none focus:border-primary transition-colors">
+                        </div>
+
+                        <div class="flex flex-col gap-2">
+                            <label for="message"
+                                class="text-xs font-bold text-white uppercase tracking-wider">Mensaje</label>
+                            <textarea name="message" id="message" rows="4" required
+                                placeholder="¿Cómo podemos colaborar?"
+                                class="w-full px-4 py-3 rounded-lg bg-[#0e0e10] border border-white/10 text-white placeholder-gray-600 focus:outline-none focus:border-primary transition-colors resize-none"></textarea>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full py-4 rounded-lg bg-white text-bg-main font-bold hover:bg-gray-200 transition-all transform hover:-translate-y-1 shadow-lg mt-2">
+                            Enviar Mensaje
+                        </button>
+
+                        <p class="text-[10px] text-center text-gray-500 mt-2">
+                            Protegido por políticas de privacidad Zero-Trust.
+                        </p>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+        <footer class="bg-bg-main border-t border-white/10 pt-16 pb-8">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+
+                    <div class="flex flex-col items-start">
+                        <img src="img/csl_logo/csl_logo.png" alt="Code Syndicate Latam"
+                            class="w-56 h-auto mb-6 opacity-90 hover:opacity-100 transition-opacity">
+                        <p class="text-text-muted text-sm leading-relaxed max-w-xs">
+                            Laboratorio de ingeniería de software enfocado en infraestructura crítica y productos
+                            propios.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h4 class="text-white font-bold mb-6 tracking-wider text-sm uppercase font-mono">Explorar</h4>
+                        <ul class="flex flex-col gap-3">
+                            <li><a href="#inicio"
+                                    class="text-text-muted text-sm hover:text-primary transition-colors">Inicio</a></li>
+                            <li><a href="#tecnologia"
+                                    class="text-text-muted text-sm hover:text-primary transition-colors">Tecnología</a>
+                            </li>
+                            <li><a href="#producto"
+                                    class="text-text-muted text-sm hover:text-primary transition-colors">Producto</a>
+                            </li>
+                            <li><a href="#equipo"
+                                    class="text-text-muted text-sm hover:text-primary transition-colors">Liderazgo</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-white font-bold mb-6 tracking-wider text-sm uppercase font-mono">Empresa</h4>
+                        <ul class="flex flex-col gap-3">
+                            <li><a href="mailto:support@codesyndicatelatam.com"
+                                    class="text-text-muted text-sm hover:text-accent transition-colors">Centro de
+                                    Ayuda</a>
+                            </li>
+                            <li><span class="text-text-muted text-sm cursor-not-allowed opacity-50">Términos de
+                                    Servicio</span></li>
+                            <li><span class="text-text-muted text-sm cursor-not-allowed opacity-50">Política de
+                                    Privacidad</span></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-white font-bold mb-6 tracking-wider text-sm uppercase font-mono">Conectar</h4>
+                        <div class="flex flex-col gap-4">
+                            <a href="mailto:contact@codesyndicatelatam.com" class="flex items-center gap-3 group">
+                                <div
+                                    class="w-8 h-8 rounded bg-white/5 flex items-center justify-center group-hover:bg-primary transition-colors">
+                                    <span class="material-symbols-outlined text-sm text-white">mail</span>
+                                </div>
+                                <span
+                                    class="text-text-muted text-sm group-hover:text-white transition-colors">contact@codesyndicatelatam.com</span>
+                            </a>
+                            <div class="flex items-center gap-3 group">
+                                <div class="w-8 h-8 rounded bg-white/5 flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-sm text-white">location_on</span>
+                                </div>
+                                <p class="text-text-muted text-xs">HQ: Santiago, Chile <br> R&D Hub: Bogotá, Colombia
+                                </p>
+                            </div>
+                            <div class="flex gap-4 mt-2">
+                                <a href="#" class="text-text-muted hover:text-[#0077b5] transition-colors"><span
+                                        class="material-symbols-outlined">link</span></a>
+                                <a href="#" class="text-text-muted hover:text-white transition-colors"><span
+                                        class="material-symbols-outlined">code</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-text-muted text-xs">&copy; 2026 Code Syndicate Latam. Todos los derechos reservados.
+                    </p>
+                    <div class="flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                        <span class="text-xs text-text-muted font-mono">All Systems Operational</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            // Mobile Menu Logic
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+
+            if (btn && menu) {
+                btn.addEventListener('click', () => {
+                    menu.classList.toggle('hidden');
                 });
-            });
-        }
-    </script>
+                // Cierra el menú al hacer clic en cualquier enlace
+                menu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        menu.classList.add('hidden');
+                    });
+                });
+            }
+
+            // Carousel Logic
+            const carousel = document.getElementById('services-carousel');
+            const prevBtn = document.getElementById('carousel-prev');
+            const nextBtn = document.getElementById('carousel-next');
+            const dots = document.querySelectorAll('#carousel-dots button');
+
+            if (carousel && prevBtn && nextBtn && dots.length > 0) {
+                let currentSlide = 0;
+                const totalSlides = dots.length;
+                let autoAdvanceTimer;
+
+                function updateCarousel() {
+                    // Update slide position
+                    carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+                    // Update dots
+                    dots.forEach((dot, index) => {
+                        if (index === currentSlide) {
+                            dot.classList.remove('bg-white/20');
+                            dot.classList.add('bg-primary');
+                        } else {
+                            dot.classList.add('bg-white/20');
+                            dot.classList.remove('bg-primary');
+                        }
+                    });
+                }
+
+                function resetTimer() {
+                    clearInterval(autoAdvanceTimer);
+                    startTimer();
+                }
+
+                function startTimer() {
+                    autoAdvanceTimer = setInterval(() => {
+                        currentSlide = (currentSlide + 1) % totalSlides;
+                        updateCarousel();
+                    }, 5000);
+                }
+
+                prevBtn.addEventListener('click', () => {
+                    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                    updateCarousel();
+                    resetTimer();
+                });
+
+                nextBtn.addEventListener('click', () => {
+                    currentSlide = (currentSlide + 1) % totalSlides;
+                    updateCarousel();
+                    resetTimer();
+                });
+
+                dots.forEach((dot, index) => {
+                    dot.addEventListener('click', () => {
+                        currentSlide = index;
+                        updateCarousel();
+                        resetTimer();
+                    });
+                });
+
+                // Start auto advance
+                startTimer();
+            }
+        </script>
+        <!-- Floating WhatsApp Button -->
+        <a href="https://wa.me/573213272234?text=Hola,%20vengo%20de%20la%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios."
+            target="_blank" rel="noopener noreferrer"
+            class="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-50 flex items-center justify-center w-12 h-12 md:w-14 md:h-14 bg-[#25D366] text-white rounded-full shadow-lg hover:bg-[#128C7E] hover:scale-110 transition-all duration-300 group">
+            <svg viewBox="0 0 24 24" class="w-7 h-7 md:w-8 md:h-8 fill-current">
+                <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
+            </svg>
+            <span
+                class="absolute right-full mr-4 bg-bg-card border border-white/10 text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 whitespace-nowrap">
+                Hablemos por WhatsApp
+            </span>
+        </a>
 </body>
+
 </html>
