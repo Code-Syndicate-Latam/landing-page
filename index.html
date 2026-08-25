@@ -33,67 +33,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Rubik:wght@400;600;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
         rel="stylesheet" />
 
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-
-    <script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    fontFamily: {
-                        "sans": ["Inter", "sans-serif"],       // Texto general
-                        "display": ["Rubik", "sans-serif"],    // Títulos (Branding)
-                        "mono": ["Space Mono", "monospace"],   // Detalles técnicos
-                    },
-                    colors: {
-                        "bg-main": "#0e0e10",   // Obsidian (Fondo Principal)
-                        "bg-card": "#262728",   // Onyx (Tarjetas)
-                        "bg-header": "#0f0842", // Deep Navy
-                        "primary": "#8236fc",   // Vivid Purple
-                        "accent": "#fbd405",    // Cyber Yellow
-                        "text-main": "#fcfffc", // Mint White
-                        "text-muted": "#a8a8b2" // Tech Grey
-                    },
-                    backgroundImage: {
-                        'hero-gradient': "linear-gradient(to bottom, rgba(15, 8, 66, 0.9), rgba(14, 14, 16, 1))",
-                    }
-                },
-            },
-        }
-    </script>
-
-    <style>
-        body {
-            font-family: "Inter", sans-serif;
-        }
-
-        /* Forzar títulos con la fuente Rubik para identidad visual */
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            font-family: "Rubik", sans-serif;
-        }
-
-        /* Utilidad para ocultar scrollbar en elementos deslizables */
-        .hide-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-
-        .hide-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-
-        /* Ajuste para móviles: evita que palabras largas rompan el diseño */
-        p,
-        h1,
-        h2 {
-            overflow-wrap: break-word;
-        }
-    </style>
+    <link rel="stylesheet" href="/css/tailwind.css">
 </head>
 
 <body class="bg-bg-main text-text-main min-h-screen antialiased selection:bg-primary/30 selection:text-white pb-16">
