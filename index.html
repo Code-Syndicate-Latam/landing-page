@@ -330,7 +330,99 @@
             </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Mobile: acordeón (reemplaza el grid en pantallas < md) -->
+        <div class="md:hidden divide-y divide-white/10 rounded-2xl border border-white/5 bg-bg-card/60 backdrop-blur-md overflow-hidden">
+
+            <details name="pilares-accordion" class="group">
+                <summary class="flex items-center justify-between gap-3 p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+                    <span class="flex items-center gap-3">
+                        <span class="w-10 h-10 flex-shrink-0 rounded-lg bg-primary/20 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-primary text-xl">encrypted</span>
+                        </span>
+                        <span class="font-bold text-white text-base">Ciberseguridad Zero-Trust</span>
+                    </span>
+                    <span class="material-symbols-outlined text-text-muted flex-shrink-0 transition-transform duration-300 group-open:rotate-180">expand_more</span>
+                </summary>
+                <div class="px-5 pb-5 pl-[4.25rem]">
+                    <p class="text-text-muted text-sm mb-4 leading-relaxed">Protegemos la información de tu empresa
+                        con arquitectura donde la identidad es el nuevo perímetro. Autenticación robusta, cifrado
+                        profundo y monitoreo continuo.</p>
+                    <div class="flex flex-wrap gap-2 font-mono">
+                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] text-accent uppercase">DevSecOps</span>
+                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] text-text-muted uppercase">Hardening</span>
+                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] text-primary uppercase">Compliance</span>
+                    </div>
+                </div>
+            </details>
+
+            <details name="pilares-accordion" class="group">
+                <summary class="flex items-center justify-between gap-3 p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+                    <span class="flex items-center gap-3">
+                        <span class="w-10 h-10 flex-shrink-0 rounded-lg bg-primary/20 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-primary text-xl">hub</span>
+                        </span>
+                        <span class="font-bold text-white text-base">Integridad de Datos</span>
+                    </span>
+                    <span class="material-symbols-outlined text-text-muted flex-shrink-0 transition-transform duration-300 group-open:rotate-180">expand_more</span>
+                </summary>
+                <div class="px-5 pb-5 pl-[4.25rem]">
+                    <p class="text-text-muted text-sm mb-4 leading-relaxed">Sistemas diseñados para la veracidad
+                        absoluta. Priorizamos la consistencia y la auditoría inmutable en cada integración que
+                        construimos.</p>
+                    <div class="flex flex-wrap gap-2 font-mono">
+                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] text-accent uppercase">SQL/NoSQL</span>
+                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] text-text-muted uppercase">Auditable</span>
+                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] text-primary uppercase">Trazable</span>
+                    </div>
+                </div>
+            </details>
+
+            <details name="pilares-accordion" class="group">
+                <summary class="flex items-center justify-between gap-3 p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+                    <span class="flex items-center gap-3">
+                        <span class="w-10 h-10 flex-shrink-0 rounded-lg bg-primary/20 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-primary text-xl">cloud_circle</span>
+                        </span>
+                        <span class="font-bold text-white text-base">Infraestructura Cloud</span>
+                    </span>
+                    <span class="material-symbols-outlined text-text-muted flex-shrink-0 transition-transform duration-300 group-open:rotate-180">expand_more</span>
+                </summary>
+                <div class="px-5 pb-5 pl-[4.25rem]">
+                    <p class="text-text-muted text-sm mb-4 leading-relaxed">Despliegue elástico y resiliente.
+                        Arquitectura de microservicios y contenedores para garantizar alta disponibilidad en los
+                        sistemas de nuestros clientes.</p>
+                    <div class="flex flex-wrap gap-2 font-mono">
+                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] text-accent uppercase">Kubernetes</span>
+                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] text-text-muted uppercase">Docker</span>
+                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] text-primary uppercase">Cloud Native</span>
+                    </div>
+                </div>
+            </details>
+
+            <details name="pilares-accordion" class="group">
+                <summary class="flex items-center justify-between gap-3 p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+                    <span class="flex items-center gap-3">
+                        <span class="w-10 h-10 flex-shrink-0 rounded-lg bg-primary/20 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-primary text-xl">code_blocks</span>
+                        </span>
+                        <span class="font-bold text-white text-base">Ingeniería de Producto</span>
+                    </span>
+                    <span class="material-symbols-outlined text-text-muted flex-shrink-0 transition-transform duration-300 group-open:rotate-180">expand_more</span>
+                </summary>
+                <div class="px-5 pb-5 pl-[4.25rem]">
+                    <p class="text-text-muted text-sm mb-4 leading-relaxed">Seleccionamos el stack tecnológico
+                        preciso para cada desafío. Desarrollo agnóstico orientado a resultados de negocio.</p>
+                    <div class="flex flex-wrap gap-2 font-mono">
+                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] text-accent uppercase">Java • Node • Py</span>
+                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] text-text-muted uppercase">React / Angular</span>
+                        <span class="px-2 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] text-primary uppercase">Agile</span>
+                    </div>
+                </div>
+            </details>
+
+        </div>
+
+        <div class="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div
                 class="group p-6 rounded-2xl bg-bg-card/60 backdrop-blur-md border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
                 <div
@@ -509,8 +601,99 @@
                     </p>
                 </div>
 
-                <!-- Carousel Container -->
-                <div class="relative w-full">
+
+                <!-- Mobile: acordeón (reemplaza el carrusel en pantallas < md) -->
+                <div class="md:hidden divide-y divide-white/10 rounded-2xl border border-white/10 bg-bg-card/60 backdrop-blur-md overflow-hidden">
+
+                    <details name="servicios-accordion" class="group">
+                        <summary class="flex items-center justify-between gap-3 p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+                            <span class="flex items-center gap-3">
+                                <span class="w-12 h-12 flex-shrink-0 rounded-xl bg-gradient-to-br from-primary/20 to-transparent border border-primary/30 flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-white text-2xl">dashboard_customize</span>
+                                </span>
+                                <span class="font-bold text-white text-base">Implementación de Odoo ERP</span>
+                            </span>
+                            <span class="material-symbols-outlined text-text-muted flex-shrink-0 transition-transform duration-300 group-open:rotate-180">expand_more</span>
+                        </summary>
+                        <div class="px-5 pb-5 pl-[4.75rem]">
+                            <p class="text-text-muted text-sm leading-relaxed">Digitalizamos y organizamos toda tu
+                                empresa en un solo sistema. CRM, contabilidad, inventario, RRHH y más - integrados y
+                                funcionando desde el primer día.</p>
+                        </div>
+                    </details>
+
+                    <details name="servicios-accordion" class="group">
+                        <summary class="flex items-center justify-between gap-3 p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+                            <span class="flex items-center gap-3">
+                                <span class="w-12 h-12 flex-shrink-0 rounded-xl bg-gradient-to-br from-accent/20 to-transparent border border-accent/30 flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-white text-2xl">psychology</span>
+                                </span>
+                                <span class="font-bold text-white text-base">Agentes de Inteligencia Artificial</span>
+                            </span>
+                            <span class="material-symbols-outlined text-text-muted flex-shrink-0 transition-transform duration-300 group-open:rotate-180">expand_more</span>
+                        </summary>
+                        <div class="px-5 pb-5 pl-[4.75rem]">
+                            <p class="text-text-muted text-sm leading-relaxed">Integramos agentes de IA directamente
+                                en tus procesos de negocio. Automatización inteligente que aprende de tu operación y
+                                reduce trabajo manual.</p>
+                        </div>
+                    </details>
+
+                    <details name="servicios-accordion" class="group">
+                        <summary class="flex items-center justify-between gap-3 p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+                            <span class="flex items-center gap-3">
+                                <span class="w-12 h-12 flex-shrink-0 rounded-xl bg-gradient-to-br from-red-500/20 to-transparent border border-red-500/30 flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-white text-2xl">security</span>
+                                </span>
+                                <span class="font-bold text-white text-base">Ciberseguridad y Hacking Ético</span>
+                            </span>
+                            <span class="material-symbols-outlined text-text-muted flex-shrink-0 transition-transform duration-300 group-open:rotate-180">expand_more</span>
+                        </summary>
+                        <div class="px-5 pb-5 pl-[4.75rem]">
+                            <p class="text-text-muted text-sm leading-relaxed">Encontramos y corregimos las
+                                vulnerabilidades de tus sistemas antes de que alguien más lo haga. Auditorías,
+                                hardening y mantenimiento continuo.</p>
+                        </div>
+                    </details>
+
+                    <details name="servicios-accordion" class="group">
+                        <summary class="flex items-center justify-between gap-3 p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+                            <span class="flex items-center gap-3">
+                                <span class="w-12 h-12 flex-shrink-0 rounded-xl bg-gradient-to-br from-blue-500/20 to-transparent border border-blue-500/30 flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-white text-2xl">account_tree</span>
+                                </span>
+                                <span class="font-bold text-white text-base">Gobernanza en TI</span>
+                            </span>
+                            <span class="material-symbols-outlined text-text-muted flex-shrink-0 transition-transform duration-300 group-open:rotate-180">expand_more</span>
+                        </summary>
+                        <div class="px-5 pb-5 pl-[4.75rem]">
+                            <p class="text-text-muted text-sm leading-relaxed">Alineamos la tecnología con los
+                                objetivos de tu negocio. Decisiones estratégicas para que tu inversión tecnológica
+                                sea segura, eficiente y sin sorpresas.</p>
+                        </div>
+                    </details>
+
+                    <details name="servicios-accordion" class="group">
+                        <summary class="flex items-center justify-between gap-3 p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+                            <span class="flex items-center gap-3">
+                                <span class="w-12 h-12 flex-shrink-0 rounded-xl bg-gradient-to-br from-purple-500/20 to-transparent border border-purple-500/30 flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-white text-2xl">psychology</span>
+                                </span>
+                                <span class="font-bold text-white text-base">Data Science y AI Aplicada</span>
+                            </span>
+                            <span class="material-symbols-outlined text-text-muted flex-shrink-0 transition-transform duration-300 group-open:rotate-180">expand_more</span>
+                        </summary>
+                        <div class="px-5 pb-5 pl-[4.75rem]">
+                            <p class="text-text-muted text-sm leading-relaxed">Convertimos tus datos en predicciones
+                                y automatización. Modelos de IA entrenados con la realidad de tu negocio para
+                                decisiones más inteligentes.</p>
+                        </div>
+                    </details>
+
+                </div>
+
+                <!-- Carousel Container (desktop/tablet) -->
+                <div class="relative w-full hidden md:block">
                     <!-- Carousel Tracks -->
                     <div class="overflow-hidden rounded-2xl">
                         <div id="services-carousel" class="flex transition-transform duration-500 ease-out"
