@@ -11,6 +11,7 @@
     <title>Code Syndicate Latam | Odoo ERP · IA · Ciberseguridad para LATAM</title>
     <link rel="icon" type="image/svg+xml"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230e0e10'/><text x='50' y='68' font-family='monospace' font-size='55' font-weight='bold' fill='%23fbd405' text-anchor='middle'>{}</text></svg>">
+    <link rel="canonical" href="https://codesyndicatelatam.com/">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://codesyndicatelatam.com/">
@@ -103,7 +104,7 @@
 
             <div class="flex items-center">
                 <a href="#inicio" class="block hover:opacity-90 transition-opacity">
-                    <img src="/img/csl_logo/csl_logo.png" alt="Code Syndicate Latam Logo"
+                    <img src="/img/csl_logo/csl_logo.png" alt="Code Syndicate Latam Logo" width="424" height="188"
                         class="h-16 md:h-20 w-auto object-contain">
                 </a>
             </div>
@@ -527,7 +528,7 @@
                 </div>
 
                 <div class="flex-shrink-0 flex items-center justify-center w-full md:w-auto mt-6 md:mt-0">
-                    <img src="img/csl_logo/odoo_certi-removebg-pre.webp" alt="Odoo"
+                    <img src="img/csl_logo/odoo_certi-removebg-pre.webp" alt="Odoo" width="669" height="373" loading="lazy"
                         class="h-32 md:h-28 block object-contain">
                 </div>
             </div>
@@ -576,11 +577,35 @@
             <div class="mt-10 mb-16 flex justify-center w-full px-4">
                 <div
                     class="w-full max-w-3xl rounded-2xl overflow-hidden border border-white/10 shadow-[0_10px_40px_rgba(0,0,0,0.5)]">
-                    <video src="video/video_homepage.webm" autoplay loop muted playsinline
-                        class="w-full h-auto block opacity-90 hover:opacity-100 transition-opacity duration-500"></video>
+                    <video data-src="video/video_homepage.webm" loop muted playsinline
+                        class="lazy-video w-full h-auto block opacity-90 hover:opacity-100 transition-opacity duration-500"></video>
                 </div>
             </div>
         </div>
+
+        <script>
+            // Difiere la carga del video (~20MB) hasta que esté a punto de entrar en el viewport,
+            // para no penalizar la carga inicial de la página.
+            (function () {
+                var videos = document.querySelectorAll('video.lazy-video[data-src]');
+                if (!videos.length) return;
+                if (!('IntersectionObserver' in window)) {
+                    videos.forEach(function (v) { v.src = v.dataset.src; v.play().catch(function () {}); });
+                    return;
+                }
+                var observer = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            var v = entry.target;
+                            v.src = v.dataset.src;
+                            v.play().catch(function () {});
+                            observer.unobserve(v);
+                        }
+                    });
+                }, { rootMargin: '200px' });
+                videos.forEach(function (v) { observer.observe(v); });
+            })();
+        </script>
 
         <div id="producto" class="w-full py-24 px-6 bg-[#0e0e10] border-t border-white/5 relative overflow-hidden">
 
@@ -848,7 +873,7 @@
                     <div
                         class="group relative p-6 rounded-2xl bg-bg-card border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
                         <div class="flex items-start justify-between mb-4">
-                            <img src="img/team_pictures/fidel.jpeg" alt="Fidel Vera"
+                            <img src="img/team_pictures/fidel.jpeg" alt="Fidel Vera" width="80" height="80" loading="lazy"
                                 class="w-20 h-20 rounded-full object-cover border-2 border-white/10 group-hover:border-primary transition-colors">
                             <a href="https://www.linkedin.com/in/fidelverachourio/"
                                 class="text-text-muted hover:text-[#0077b5] transition-colors"><span
@@ -868,7 +893,7 @@
                     <div
                         class="group relative p-6 rounded-2xl bg-bg-card border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
                         <div class="flex items-start justify-between mb-4">
-                            <img src="img/team_pictures/julio.jpeg" alt="Julio Alvarez"
+                            <img src="img/team_pictures/julio.jpeg" alt="Julio Alvarez" width="80" height="80" loading="lazy"
                                 class="w-20 h-20 rounded-full object-cover border-2 border-white/10 group-hover:border-primary transition-colors">
                             <a href="https://www.linkedin.com/in/ing-julio-alvarez-t/"
                                 class="text-text-muted hover:text-[#0077b5] transition-colors"><span
@@ -889,7 +914,7 @@
                     <div
                         class="group relative p-6 rounded-2xl bg-bg-card border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
                         <div class="flex items-start justify-between mb-4">
-                            <img src="img/team_pictures/juan.jpeg" alt="Juan Carlos Avila"
+                            <img src="img/team_pictures/juan.jpeg" alt="Juan Carlos Avila" width="80" height="80" loading="lazy"
                                 class="w-20 h-20 rounded-full object-cover border-2 border-white/10 group-hover:border-primary transition-colors">
                             <a href="https://www.linkedin.com/in/avilameza79/"
                                 class="text-text-muted hover:text-[#0077b5] transition-colors"><span
@@ -909,7 +934,7 @@
                     <div
                         class="group relative p-6 rounded-2xl bg-bg-card border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
                         <div class="flex items-start justify-between mb-4">
-                            <img src="img/team_pictures/lizeth.jpeg" alt="Lizeth Monroy"
+                            <img src="img/team_pictures/lizeth.jpeg" alt="Lizeth Monroy" width="80" height="80" loading="lazy"
                                 class="w-20 h-20 rounded-full object-cover border-2 border-white/10 group-hover:border-primary transition-colors">
                             <a href="https://www.linkedin.com/in/lizeth-nathaly-monroy-m/"
                                 class="text-text-muted hover:text-[#0077b5] transition-colors"><span
@@ -929,7 +954,7 @@
                     <div
                         class="group relative p-6 rounded-2xl bg-bg-card border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
                         <div class="flex items-start justify-between mb-4">
-                            <img src="img/team_pictures/raul.jpeg" alt="Raul Almao"
+                            <img src="img/team_pictures/raul.jpeg" alt="Raul Almao" width="80" height="80" loading="lazy"
                                 class="w-20 h-20 rounded-full object-cover border-2 border-white/10 group-hover:border-primary transition-colors">
                             <a href="https://www.linkedin.com/in/ralmao/"
                                 class="text-text-muted hover:text-[#0077b5] transition-colors"><span
@@ -949,7 +974,7 @@
                     <div
                         class="group relative p-6 rounded-2xl bg-bg-card border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
                         <div class="flex items-start justify-between mb-4">
-                            <img src="img/team_pictures/brayan.jpg" alt="Brayan Bravo"
+                            <img src="img/team_pictures/brayan.jpg" alt="Brayan Bravo" width="80" height="80" loading="lazy"
                                 class="w-20 h-20 rounded-full object-cover border-2 border-white/10 group-hover:border-primary transition-colors">
                             <a href="https://www.linkedin.com/in/brayan-mateo-bravo-losada-14971a216/"
                                 class="text-text-muted hover:text-[#0077b5] transition-colors"><span
@@ -969,7 +994,7 @@
                     <div
                         class="group relative p-6 rounded-2xl bg-bg-card border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
                         <div class="flex items-start justify-between mb-4">
-                            <img src="img/team_pictures/brayan.jpg" alt="Adarleika Silva"
+                            <img src="img/team_pictures/brayan.jpg" alt="Adarleika Silva" width="80" height="80" loading="lazy"
                                 class="w-20 h-20 rounded-full object-cover border-2 border-white/10 group-hover:border-primary transition-colors">
                             <a href="https://www.linkedin.com/in/adarleika/"
                                 class="text-text-muted hover:text-[#0077b5] transition-colors"><span
@@ -1083,7 +1108,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
 
                     <div class="flex flex-col items-start">
-                        <img src="img/csl_logo/csl_logo.png" alt="Code Syndicate Latam"
+                        <img src="img/csl_logo/csl_logo.png" alt="Code Syndicate Latam" width="424" height="188" loading="lazy"
                             class="w-56 h-auto mb-6 opacity-90 hover:opacity-100 transition-opacity">
                         <p class="text-text-muted text-sm leading-relaxed max-w-xs">
                             Consultora tecnológica B2B especializada en Odoo ERP, Inteligencia Artificial 
