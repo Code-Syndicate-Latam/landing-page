@@ -1,3 +1,12 @@
 [build]
   command = "npm install && npm run build:css"
   publish = "."
+
+# Redirige el subdominio automatico de Netlify al dominio real, para evitar
+# contenido duplicado (SEO) y que herramientas como GA4/Tag Manager detecten
+# el tag disparandose en un dominio no configurado.
+[[redirects]]
+  from = "https://rad-fox-18e0f4.netlify.app/*"
+  to = "https://codesyndicatelatam.com/:splat"
+  status = 301
+  force = true
