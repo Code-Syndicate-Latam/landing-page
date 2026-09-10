@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <meta name="description"
+        content="Implementamos Odoo ERP para digitalizar ventas, inventario y contabilidad de tu empresa. Odoo Learning Partner 2026-2027. Diagnóstico inicial desde $600 USD.">
+
+    <title>Implementación de Odoo ERP | Code Syndicate Latam — Odoo Learning Partner</title>
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230e0e10'/><text x='50' y='68' font-family='monospace' font-size='55' font-weight='bold' fill='%23fbd405' text-anchor='middle'>{}</text></svg>">
+    <link rel="canonical" href="https://codesyndicatelatam.com/odoo-erp/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://codesyndicatelatam.com/odoo-erp/">
+    <meta property="og:title" content="Implementación de Odoo ERP | Code Syndicate Latam">
+    <meta property="og:description"
+        content="Centralizamos ventas, inventario y contabilidad en una sola plataforma. Odoo Learning Partner 2026-2027.">
+    <meta property="og:image" content="https://codesyndicatelatam.com/og-preview.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://codesyndicatelatam.com/odoo-erp/">
+    <meta name="twitter:title" content="Implementación de Odoo ERP | Code Syndicate Latam">
+    <meta name="twitter:description"
+        content="Odoo Learning Partner 2026-2027. Diagnóstico inicial desde $600 USD.">
+    <meta name="twitter:image" content="https://codesyndicatelatam.com/og-preview.jpg">
+
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Rubik:wght@400;600;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="/css/tailwind.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Implementación de Odoo ERP",
+      "name": "Diagnóstico de ERP / Odoo",
+      "description": "Evaluación de procesos y hoja de ruta para implementar Odoo en tu operación.",
+      "provider": {
+        "@type": "ProfessionalService",
+        "name": "Code Syndicate Latam",
+        "url": "https://codesyndicatelatam.com/",
+        "telephone": "+573213272234",
+        "address": { "@type": "PostalAddress", "addressLocality": "Bogotá", "addressCountry": "CO" }
+      },
+      "areaServed": { "@type": "Place", "name": "Latinoamérica" },
+      "offers": [
+        { "@type": "Offer", "name": "Demo personalizada de Odoo ERP", "priceCurrency": "USD", "price": "0" },
+        { "@type": "Offer", "name": "Diagnóstico de ERP / Odoo", "priceCurrency": "USD", "price": "600" }
+      ]
+    }
+    </script>
+</head>
+
+<body class="bg-bg-main text-text-main min-h-screen antialiased selection:bg-primary/30 selection:text-white pb-16">
+
+    <nav
+        class="sticky top-0 z-50 border-b border-white/5 backdrop-blur-md bg-bg-main/90 supports-[backdrop-filter]:bg-bg-main/60">
+        <div class="flex items-center justify-between px-6 py-4 max-w-7xl mx-auto">
+
+            <div class="flex items-center">
+                <a href="/" class="block hover:opacity-90 transition-opacity">
+                    <img src="/img/csl_logo/csl_logo.png" alt="Code Syndicate Latam Logo" width="424" height="188"
+                        class="h-16 md:h-20 w-auto object-contain">
+                </a>
+            </div>
+
+            <div class="hidden md:flex items-center gap-8">
+                <a href="/#tecnologia"
+                    class="text-sm font-semibold text-white hover:text-accent transition-colors tracking-wide">TECNOLOGÍA</a>
+                <a href="/#producto"
+                    class="text-sm font-semibold text-white hover:text-accent transition-colors tracking-wide">PRODUCTO</a>
+                <a href="/#equipo"
+                    class="text-sm font-semibold text-white hover:text-accent transition-colors tracking-wide">EQUIPO</a>
+                <a href="/#contacto"
+                    class="text-sm font-semibold text-white hover:text-accent transition-colors tracking-wide">CONTACTO</a>
+                <a href="mailto:contact@codesyndicatelatam.com"
+                    class="px-5 py-2 rounded-md bg-white/10 border border-white/10 text-white text-sm font-bold hover:bg-primary hover:border-primary transition-all">
+                    Conectar
+                </a>
+            </div>
+
+            <div class="md:hidden">
+                <button id="mobile-menu-btn"
+                    class="text-white hover:text-accent transition-colors focus:outline-none p-2">
+                    <span class="material-symbols-outlined" style="font-size: 32px;">menu</span>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-bg-card border-b border-white/5 absolute w-full left-0 top-full shadow-2xl backdrop-blur-xl bg-opacity-95">
+            <div class="flex flex-col px-6 py-6 gap-4">
+                <a href="/"
+                    class="text-base font-semibold text-white hover:text-accent py-2 border-b border-white/5">Inicio</a>
+                <a href="/#tecnologia"
+                    class="text-base font-semibold text-white hover:text-accent py-2 border-b border-white/5">Tecnología</a>
+                <a href="/#producto"
+                    class="text-base font-semibold text-white hover:text-accent py-2 border-b border-white/5">Producto</a>
+                <a href="/#equipo"
+                    class="text-base font-semibold text-white hover:text-accent py-2 border-b border-white/5">Equipo</a>
+                <a href="/#contacto" class="text-base font-semibold text-white hover:text-accent py-2">Contacto</a>
+                <a href="mailto:contact@codesyndicatelatam.com"
+                    class="mt-2 text-center w-full py-3 rounded-md bg-primary text-white font-bold">Conectar</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="relative w-full bg-hero-gradient pt-24 pb-16 px-6 text-center overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute inset-0"
+                style="background-image: linear-gradient(rgba(130, 54, 252, 0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(130, 54, 252, 0.15) 1px, transparent 1px); background-size: 50px 50px;">
+            </div>
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,#0e0e10_80%)]"></div>
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto flex flex-col gap-6 items-center">
+            <div
+                class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/20 border border-primary/50 backdrop-blur-sm">
+                <span class="material-symbols-outlined text-[#38bdf8]" style="font-size: 20px;">cloud</span>
+                <span class="text-white text-xs font-bold uppercase tracking-widest">Odoo Learning Partner 2026-2027</span>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-black leading-tight tracking-tight text-white drop-shadow-lg">
+                Implementación de <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-white to-primary">Odoo ERP</span>
+            </h1>
+            <p class="text-text-muted text-lg md:text-xl max-w-2xl leading-relaxed">
+                Centralizamos y optimizamos todos los procesos de tu negocio en una sola plataforma. Como Odoo
+                Learning Partner certificados, implementamos con estándares oficiales y acompañamos a nuestros
+                clientes en cada etapa.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 w-full justify-center mt-4">
+                <a href="https://wa.me/573213272234?text=Hola%2C%20me%20interesa%20una%20demo%20gratuita%20de%20Odoo%20para%20mi%20empresa.%20%C2%BFPodemos%20agendar%3F"
+                    target="_blank" rel="noopener noreferrer"
+                    class="px-8 py-4 rounded-lg bg-accent text-bg-main font-bold text-lg hover:bg-yellow-300 transition-all transform hover:-translate-y-1 shadow-[0_0_20px_rgba(251,212,5,0.3)] text-center font-display">
+                    Agenda una demo gratuita
+                </a>
+                <a href="https://wa.me/573213272234?text=Hola%2C%20me%20interesa%20el%20diagn%C3%B3stico%20de%20ERP%2FOdoo%20(%24600%20USD).%20%C2%BFPodemos%20agendar%3F"
+                    target="_blank" rel="noopener noreferrer"
+                    class="px-8 py-4 rounded-lg bg-white/5 text-white border border-white/10 font-bold text-lg hover:bg-white/10 hover:border-primary/50 transition-all backdrop-blur-md text-center font-display">
+                    Diagnóstico completo — $600 USD
+                </a>
+            </div>
+            <p class="text-text-muted text-sm">
+                ¿No sabes cuál elegir? <a href="/#diagnosticos" class="text-primary hover:underline">Compara los 5 diagnósticos de entrada</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="px-6 py-16 max-w-5xl mx-auto">
+        <div class="mb-6 flex items-center justify-center md:justify-start gap-6">
+            <img src="/img/csl_logo/odoo_certi-removebg-pre.webp" alt="Odoo Learning Partner" width="669" height="373"
+                loading="lazy" class="h-20 block object-contain">
+        </div>
+        <p class="text-text-muted text-lg leading-relaxed mb-4">
+            Un ERP bien implementado no es solo software: es que ventas, inventario y contabilidad dejen de vivir
+            en hojas de cálculo separadas y empiecen a hablar entre sí. Como Odoo Learning Partner, seguimos la
+            metodología oficial de Odoo para evitar el error más común en estos proyectos: adaptar el sistema a
+            procesos improvisados en lugar de aprovechar lo que Odoo ya resuelve de fábrica.
+        </p>
+        <p class="text-text-muted text-lg leading-relaxed mb-4">
+            La demo gratuita es el primer paso: te mostramos Odoo funcionando con casos parecidos a los de tu
+            empresa, sin costo y sin compromiso. El diagnóstico de $600 USD es el siguiente paso, para cuando ya
+            sabes que quieres avanzar — ahí evaluamos tus procesos reales y entregamos una hoja de ruta de
+            implementación.
+        </p>
+    </div>
+
+    <div class="px-6 pb-16 max-w-5xl mx-auto">
+        <span class="text-accent text-xs font-bold tracking-[0.2em] uppercase mb-3 block font-mono">Qué
+            digitalizamos</span>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div
+                class="group p-6 rounded-2xl bg-bg-card/60 backdrop-blur-md border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1">
+                <div
+                    class="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                    <span class="material-symbols-outlined text-primary group-hover:text-white">point_of_sale</span>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-white">Ventas y CRM</h3>
+                <p class="text-text-muted text-sm leading-relaxed">Automatiza tus procesos de venta, gestiona tus
+                    clientes potenciales, realiza seguimientos precisos y cierra más negocios de manera eficiente y
+                    centralizada.</p>
+            </div>
+
+            <div
+                class="group p-6 rounded-2xl bg-bg-card/60 backdrop-blur-md border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1">
+                <div
+                    class="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                    <span class="material-symbols-outlined text-primary group-hover:text-white">inventory_2</span>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-white">Inventario y Compras</h3>
+                <p class="text-text-muted text-sm leading-relaxed">Mantén un control total de tu stock en tiempo
+                    real, automatiza las reglas de reabastecimiento y mejora la relación con tus proveedores desde
+                    un solo lugar.</p>
+            </div>
+
+            <div
+                class="group p-6 rounded-2xl bg-bg-card/60 backdrop-blur-md border border-white/5 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1">
+                <div
+                    class="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                    <span class="material-symbols-outlined text-primary group-hover:text-white">account_balance</span>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-white">Contabilidad y Finanzas</h3>
+                <p class="text-text-muted text-sm leading-relaxed">Gestiona tu facturación, controla gastos y
+                    visualiza informes financieros en tiempo real con una herramienta de contabilidad integrada y
+                    sin complicaciones.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="px-6 pb-20 max-w-5xl mx-auto">
+        <div class="rounded-2xl bg-bg-card/60 backdrop-blur-md border border-white/5 p-8 md:p-10">
+            <span class="text-accent text-xs font-bold tracking-[0.2em] uppercase mb-3 block font-mono">Diagnóstico
+                de entrada</span>
+            <h3 class="text-2xl md:text-3xl font-bold text-white mb-4">Evaluación de procesos y hoja de ruta</h3>
+            <p class="text-text-muted text-lg leading-relaxed mb-6">
+                Antes de un proyecto grande, evaluamos tu situación real. Precio fijo, sin sorpresas, sujeto a
+                validación de alcance.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center gap-6">
+                <p class="text-accent font-mono text-4xl font-bold">$600 <span
+                        class="text-base text-text-muted font-sans font-normal">USD</span></p>
+                <a href="https://wa.me/573213272234?text=Hola%2C%20me%20interesa%20el%20diagn%C3%B3stico%20de%20ERP%2FOdoo%20(%24600%20USD).%20%C2%BFPodemos%20agendar%3F"
+                    target="_blank" rel="noopener noreferrer"
+                    class="px-6 py-3 rounded-lg bg-white/5 border border-white/10 text-white text-sm font-bold hover:bg-primary hover:border-primary transition-all">
+                    Agendar por WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-bg-main border-t border-white/10 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+
+                <div class="flex flex-col items-start">
+                    <img src="/img/csl_logo/csl_logo.png" alt="Code Syndicate Latam" width="424" height="188" loading="lazy"
+                        class="w-56 h-auto mb-6 opacity-90 hover:opacity-100 transition-opacity">
+                    <p class="text-text-muted text-sm leading-relaxed max-w-xs">
+                        Consultora tecnológica B2B especializada en Odoo ERP, Inteligencia Artificial
+                        y Ciberseguridad para empresas en Latinoamérica.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-6 tracking-wider text-sm uppercase font-mono">Explorar</h4>
+                    <ul class="flex flex-col gap-3">
+                        <li><a href="/"
+                                class="text-text-muted text-sm hover:text-primary transition-colors">Inicio</a></li>
+                        <li><a href="/#tecnologia"
+                                class="text-text-muted text-sm hover:text-primary transition-colors">Tecnología</a>
+                        </li>
+                        <li><a href="/#producto"
+                                class="text-text-muted text-sm hover:text-primary transition-colors">Producto</a>
+                        </li>
+                        <li><a href="/#equipo"
+                                class="text-text-muted text-sm hover:text-primary transition-colors">Liderazgo</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-6 tracking-wider text-sm uppercase font-mono">Empresa</h4>
+                    <ul class="flex flex-col gap-3">
+                        <li><span class="text-text-muted text-sm cursor-not-allowed opacity-50">Términos de
+                                Servicio</span></li>
+                        <li><span class="text-text-muted text-sm cursor-not-allowed opacity-50">Política de
+                                Privacidad</span></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-6 tracking-wider text-sm uppercase font-mono">Conectar</h4>
+                    <div class="flex flex-col gap-4">
+                        <a href="mailto:contacto@codesyndicatelatam.com" class="flex items-center gap-3 group">
+                            <div
+                                class="w-8 h-8 rounded bg-white/5 flex items-center justify-center group-hover:bg-primary transition-colors">
+                                <span class="material-symbols-outlined text-sm text-white">mail</span>
+                            </div>
+                            <span
+                                class="text-text-muted text-sm group-hover:text-white transition-colors">contacto@codesyndicatelatam.com</span>
+                        </a>
+                        <div class="flex items-center gap-3 group">
+                            <div class="w-8 h-8 rounded bg-white/5 flex items-center justify-center group-hover:bg-primary transition-colors">
+                                <span class="material-symbols-outlined text-sm text-white">location_on</span>
+                            </div>
+                            <p class="text-text-muted text-sm group-hover:text-white transition-colors">Bogotá, Colombia</p>
+                        </div>
+                        <div class="flex gap-4 mt-2">
+                            <a href="https://www.linkedin.com/company/code-syndicate-latam/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="text-text-muted hover:text-[#0077b5] transition-colors"><span
+                                    class="material-symbols-outlined">link</span></a>
+                            <a href="https://www.instagram.com/codesyndicatelatam/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="text-text-muted hover:text-white transition-colors"><span
+                                    class="material-symbols-outlined">photo_camera</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-text-muted text-xs">&copy; 2026 Code Syndicate Latam. Todos los derechos reservados.
+                </p>
+                <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                    <span class="text-xs text-text-muted font-mono">All Systems Operational</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        if (btn && menu) {
+            btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
+            menu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => { menu.classList.add('hidden'); });
+            });
+        }
+    </script>
+
+    <!-- Sticky Contact Bar: visible en todo el sitio, WhatsApp + Agendar diagnóstico -->
+    <div id="sticky-contact-bar"
+        class="fixed bottom-0 inset-x-0 z-50 flex items-stretch border-t border-white/10 bg-bg-main/95 backdrop-blur-md supports-[backdrop-filter]:bg-bg-main/85 shadow-[0_-4px_20px_rgba(0,0,0,0.4)]">
+        <a href="https://wa.me/573213272234?text=Hola,%20vengo%20de%20la%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios."
+            target="_blank" rel="noopener noreferrer" aria-label="Escríbenos por WhatsApp"
+            class="flex-1 flex items-center justify-center gap-2 py-3.5 md:py-4 bg-[#25D366] text-white font-bold text-sm md:text-base tracking-tight hover:bg-[#128C7E] transition-colors">
+            <svg viewBox="0 0 24 24" class="w-5 h-5 fill-current flex-shrink-0" aria-hidden="true">
+                <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
+            </svg>
+            <span>WhatsApp</span>
+        </a>
+        <a href="/#diagnosticos" aria-label="Agendar diagnóstico"
+            class="flex-1 flex items-center justify-center gap-2 py-3.5 md:py-4 bg-accent text-bg-main font-bold text-sm md:text-base tracking-tight hover:bg-yellow-300 transition-colors border-l border-black/10">
+            <span class="material-symbols-outlined text-[20px]" aria-hidden="true">event_available</span>
+            <span>Agendar diagnóstico</span>
+        </a>
+    </div>
+</body>
+
+</html>
