@@ -2,18 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Disket Mono: fuente de "{ CODE }" en el logotipo (archivos en /fonts) */
+@font-face {
+    font-family: "Disket Mono";
+    src: url("/fonts/DisketMono-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Disket Mono";
+    src: url("/fonts/DisketMono-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-display: swap;
+}
+
 body {
     font-family: "Inter", sans-serif;
 }
 
-/* Forzar títulos con la fuente Rubik para identidad visual */
+/* Títulos en Sora, según el Design System de CSL */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-    font-family: "Rubik", sans-serif;
+    font-family: "Sora", sans-serif;
 }
 
 /* Utilidad para ocultar scrollbar en elementos deslizables */
