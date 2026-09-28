@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: "class",
-  content: ["./index.html", "./ciberseguridad/index.html", "./odoo-erp/index.html", "./paginas-web/index.html"],
+  content: ["./index.html", "./ciberseguridad/index.html", "./odoo-erp/index.html", "./paginas-web/index.html", "./blog/index.html", "./blog/como-implementar-un-erp-en-colombia/index.html"],
   theme: {
     extend: {
       fontFamily: {
